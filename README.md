@@ -7,6 +7,7 @@ With the Prosper Borrower SDK, you can refer your customers to receive loan offe
 
 ## Prosper Borrower SDK requirements
 The Prosper Borrower SDK supports iOS 7 or higher versions.
+The current version of the Borrower SDK was built using Xcode 7.0+.
 
 The SDK also uses the following frameworks/libraries:
  * AFNetworking
@@ -138,10 +139,10 @@ Add the following frameworks and libraries linked into your application. These f
 ## Configure your Prosper client id and secret
 When you became a registered referral partner with Prosper Marketplace, you should have received a clientId and clientSecret in your welcome email.
 Create the following keys as Strings in your project’s info.plist file:
- * prosperAppID: <clientId_provided>
- * prosperSecretID: <clientSecret_provided>
- * refMC: <Refmc_provided>
- * refAC: <Refac_provided>
+ * prosperAppID: &lt;Client_Id_provided&gt;
+ * prosperSecretID: &lt;Client_Secret_provided&gt;
+ * refMC: &lt;Ref_AC_provided&gt;
+ * refAC: &lt;Ref_MC_provided&gt;
 
 When invoked, the Prosper Borrower SDK will use these keys in the info.plist file to authenticate your client. These keys also associate your client as the referring partner when we generate a Prosper loan listing.
 
