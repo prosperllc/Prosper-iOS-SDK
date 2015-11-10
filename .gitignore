@@ -1,0 +1,13 @@
+**/build/*
+*/test-reports/*
+*.pbxuser
+*.mode1v3
+**/.idea/*
+
+xcuserdata
+project.xcworkspace
+
+*~
+*.DS_Store
+*.swp
+*.out
