@@ -7,7 +7,7 @@ With the Prosper Borrower SDK, you can refer your customers to receive loan offe
 
 ## Prosper Borrower SDK requirements
 The Prosper Borrower SDK supports iOS 7 or higher versions.
-The current version of the Borrower SDK was built using Xcode 7.0+.
+You must use Xcode 7 or higher to build your project with the SDK. 
 
 The SDK also uses the following frameworks/libraries:
  * AFNetworking
@@ -42,7 +42,7 @@ The last two keys associate your app as the referring partner when we generate a
 
 3. Test your integration on the Prosper Sandbox environment.
   
-  The keys you received in step 1 above work on the Prosper Sandbox environment. All of your initial testing will happen on our Sandbox environment, which is a mirror of our Production environement.   
+  The keys you received in step 1 above work on the Prosper Sandbox environment. All of your initial testing will happen on our Sandbox environment, which is a mirror of our Production environment.   
   
   When everything is working well end to end, drop us another email with a request for Production keys to go live! This new set of keys are configured to work on the Prosper Production environment. Again, these keys will work for both the iOS and Android versions of the Prosper Borrower SDK.
 
@@ -55,23 +55,23 @@ The last two keys associate your app as the referring partner when we generate a
 ## User flow one: Prosper Borrower SDK collects user information
 The diagram below shows the flow between your app and the Prosper Borrower SDK throughout the loan offer and application process. In this flow, your app does not collect user information required to generate loan offers through Prosper. Instead, your app launches the Borrower SDK, leaving user information collection and loan offer display and selection to the Prosper Borrower SDK.  
 
-![User flow diagram for when the SDK collects user information](https://github.com/prosperllc/mobile-wiki/blob/master/iosSDKSample/doc-images/ProsperBorrowerSDKFlowDiagramNoOfferInfo.png)
+![User flow diagram for when the SDK collects user information](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/ProsperBorrowerSDKFlowDiagramNoOfferInfo.png)
 
 
 ## User flow two: Your app collects user information
 The diagram below shows the flow between your app and the Prosper Borrower SDK throughout the loan offer and application process. In this flow, your app collects user information required to generate loan offers through Prosper. You pass this user information to the Prosper Borrower SDK. Prosper generates a list of personalized loan offers you can present to the user. You then launch the Borrower SDK when the user selects from the list of personalized loan offers.
 
-![User flow diagram for when your app collects user information](https://github.com/prosperllc/mobile-wiki/blob/master/iosSDKSample/doc-images/ProsperBorrowerSDKFlowDiagramNoComp.png)
+![User flow diagram for when your app collects user information](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/ProsperBorrowerSDKFlowDiagramNoComp.png)
 
 # Consumer experience in your app with the Prosper SDK
 
 The following screenshots show the flow of the Prosper Borrower SDK on iOS. The first image represents a partner app displaying a list of personalized loan offers to a customer. Once the customer selects a loan offer, your app launches the Prosper Borrower SDK, allowing the customer to complete the loan application.
 
-![Prosper Borrower SDK for iOS screenshots](https://github.com/prosperllc/mobile-wiki/blob/master/iosSDKSample/doc-images/iOSScreenshots.png)
+![Prosper Borrower SDK for iOS screenshots](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/iOSScreenshots.png)
 
 Here's the Prosper Borrower SDK in action on the iOS platform.
 
-![Demo] (https://github.com/prosperllc/mobile-wiki/blob/master/iosSDKSample/doc-images/iOS.gif)
+![Demo] (https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/iOS.gif)
 
 # Installing third-party dependency libraries using CocoaPods
 Before you can integrate the Prosper Borrower SDK into your app, you must use CocoaPods to download and install third-party libraries that the Prosper Borrower SDK is dependent on. 
@@ -125,7 +125,7 @@ The Prosper Borrower SDK for iOS is a framework you add to your Xcode project.
     This references the Prosper Borrower SDK where you installed it rather than copying the Prosper Borrower SDK into your app.
     * Under **Added folders**, choose **Create groups**.
 
-    ![Screenshot of the Add frameworks options dialog in XCode](https://github.com/prosperllc/mobile-wiki/blob/master/iosSDKSample/doc-images/MoneyConnectScreenshotResized.png)
+    ![Screenshot of the Add frameworks options dialog in XCode](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/MoneyConnectScreenshotResized.png)
 
 
 ## Link frameworks and libraries to your build
@@ -133,7 +133,7 @@ Add the following frameworks and libraries linked into your application. These f
  * SystemConfiguration.framework
  * libsqllite3.0.dylib
 
-    ![Screenshot of the Link frameworks and libraries dialog in XCode](https://github.com/prosperllc/mobile-wiki/blob/master/iosSDKSample/doc-images/xCodeFrameworksAndLibrariesResized.png)
+    ![Screenshot of the Link frameworks and libraries dialog in XCode](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/xCodeFrameworksAndLibrariesResized.png)
 
 
 ## Configure your Prosper client id and secret
