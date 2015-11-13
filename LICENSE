@@ -1,0 +1,130 @@
+#Legal notices
+1.1 Confidential Information. The integrator of the SDK (“Integrator”)
+and their respective affiliates, directors, officers, employees,
+authorized representatives, agents and advisors shall keep confidential
+all information concerning proprietary business procedures, products,
+services, operations, software development kits (“SDKs”), marketing
+materials, fees, policies or plans and all Nonpublic Personal
+Information that is received or obtained from Prosper Marketplace Inc.
+(“Prosper”) prior to or during the integration relationship, whether
+such information is oral or written, and whether or not labeled as
+confidential (collectively “Confidential Information”). “Nonpublic
+Personal Information” shall include all personally identifiable
+financial information and any list, description or other grouping of
+consumers, and publicly available information pertaining to them, that
+is derived using any personally identifiable financial information that
+is not publicly available, and shall further include all “nonpublic
+personal information” as defined by federal regulations implementing the
+Gramm-Leach-Bliley Act, as amended from time to time. “Personally
+identifiable financial information” means any information a consumer
+provides to the Integrator or Prosper in order to obtain a financial
+product or service, any information Integrator or Prosper otherwise
+obtains about a consumer in connection with providing a financial
+product or service to that consumer, and any information about a
+consumer resulting from any transaction involving a financial product or
+service between the Integrator or Prosper and a consumer. Personally
+identifiable information may include, without limitation, a consumer's
+first and last name, physical address, zip code, email address, phone
+number, social security number, birth date, and any other information
+that itself identifies or when tied to the above information, may
+identify a consumer.
+
+1.2 Use of Confidential Information. For as long as Confidential
+Information is in possession of the Integrator, the Integrator shall
+take reasonable steps, at least substantially equivalent to the steps it
+takes to protect its own proprietary information, to prevent the use,
+duplications or disclosure of Confidential Information, other than, by
+or to its employees or agents who are directly involved in integrating
+the Prosper SDKs and who are apprised of their obligations required by
+these Legal Notices and directed by the Integrator to treat such
+information confidentially, or except as required by law or by a
+supervising regulatory agency of the integrator. The Integrator shall
+not disclose, share, rent, sell or transfer to any third party any
+Confidential Information. The parties shall use Confidential Information
+only as necessary to perform the integration of the Prosper SDKs.  The
+Integrator shall treat any Nonpublic Personal Information that it
+receives from the other party in a manner that is fully compliant with
+the disclosing party's obligations under Title V of the
+Gramm-Leach-Bliley Act and any implementing regulations thereunder,
+including but not limited to applicable limits on the use, disclosure,
+storage, safeguarding and destruction of Nonpublic Personal Information.
+ In addition, to the extent that the Integrator receives Nonpublic
+Personal Information, the Integrator shall maintain commercially
+reasonable data security and disaster recovery protections that at the
+least are consistent with industry standards for the consumer lending
+industry.
+
+1.3 Return of Information; Indemnity. Upon the termination or expiration
+of the integration of the Prosper SDKs, the Integrator shall promptly
+return all Confidential Information received in connection with the
+integration, or shall promptly destroy any materials containing such
+information (and any copies, extracts, and summaries thereof) and shall
+provide Prosper with written confirmation of such return or destruction
+upon request. In the event the Integrator discovers that Confidential
+Information has been used in an unauthorized manner or disclosed in
+violation of the Legal Notices, the Integrator discovering the
+unauthorized use or disclosure shall immediately notify Prosper of such
+event, and the Integrator of the Prosper SDKs shall indemnify and hold
+Prosper harmless from all claims, damage, liability, costs and expenses
+(including court costs and reasonable attorneys' fees) arising or
+resulting from the unauthorized use or disclosure. In addition, Prosper
+shall be entitled to all other remedies available at law or equity,
+including injunctive relief.
+
+2.1 Ownership.  Notwithstanding any other language or information within
+the SDK Integration Guide, the Integrator acknowledges and agrees that
+Prosper shall retain sole and exclusive ownership of the Prosper SDKs
+and related materials and all intellectual property rights therein. 
+Prosper acknowledges and agrees that the Integrator shall retain sole
+and exclusive ownership of the integrator’s background technology that
+existed prior to integration and all intellectual property rights
+therein.
+
+2.2 Reservation of Rights.  Prosper and Integrator shall continue to own
+all rights, title and interest in and to its patents, know-how, trade
+secrets, software, trademarks and all other intellectual property,
+subject only to the license rights expressly granted herein.
+
+3.1 SDK API Key and Secret Security.   When using the Prosper SDKs, the
+Integrator shall follow these specified essential security protocols.
+
+3.1.1  The Integrator shall only use the API key and secret provided to
+you by Prosper; specifically, the Integrator shall not communicate with
+the SDK using keys or secrets that are not authorized by Prosper for
+your use.
+
+3.1.2 THE INTEGRATOR IS SOLEY RESPONSIBLE FOR MAINTAINING ADEQUATE
+SECURITY AND CONTROL OF ANY API KEY AND SECRET COMBINATION PROVIDED TO
+YOU.  BECAUSE THE KEY AND SECRET ENSURE AUTHORIZED COMMUNICATIONS
+BETWEEN THE INTEGRATOR AND PROSPER, THE INTEGRATOR MUST PROTECT THE KEY
+AND SECRET, ALLOWING ONLY AUTHORIZED AND AUTHENTICATED ENTITIES, SUCH AS
+INDIVIDUALS, APIS, CODE, ETC., TO ACCESS THE KEY AND SECRET.
+
+4.1 Indemnification by Integrator of Prosper SDKs.  Integrator shall
+indemnify, defend and hold Prosper harmless from and against any Claim
+that is attributable to or arises from (i) Integrator’s violation of any
+state or Federal law, rule or regulation, or any other illegal or
+actionable act or omission by or on behalf of Integrator; (ii)
+Integrator’s breach of any material obligation owed to Prosper; and
+(iii) any acts or omissions by Integrator, its employees or its agents,
+in connection with Integrator’s marketing efforts or efforts related to
+the protection of data privacy or security keys.  Integrator agrees to
+promptly pay and fully satisfy any and all losses, judgments or
+expenses, including, without limitation, costs of settlement and
+attorneys’ fees incurred or sustained, or reasonably likely to be
+incurred or sustained by Prosper as a result of any claims of the types
+described above.
+
+4.2 Procedures.  Prosper shall: (i) promptly notify the Integrator in
+writing of any losses for which Prosper seeks indemnification; (ii)
+provide reasonable cooperation to the Integrator and its legal
+representatives in the investigation of any matter which is the subject
+of indemnification; and (iii) permit Integrator to have full control
+over the defense and settlement of any matter subject to
+indemnification; provided, however, that the Integrator shall not enter
+into any settlement that affects Prosper’s rights or interests without
+Prosper’s prior written consent, which shall not be unreasonably
+withheld or delayed.  Prosper shall have the right to participate in the
+defense at its expense.
+
+
