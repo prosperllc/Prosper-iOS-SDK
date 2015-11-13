@@ -3,7 +3,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = 'prosper-ios-sdk'
-  spec.version      = '1.0'
+  spec.version      = '1.0.0'
   spec.license      = 'MIT'
   spec.summary      = 'Framework for Prosper borrower services'
   spec.homepage     = 'https://github.com/prosperllc/Prosper-iOS-SDK'
