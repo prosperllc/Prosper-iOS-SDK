@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://github.com/prosperllc/Prosper-iOS-SDK'
 # spec.social_media_url = 'http://facebook'
   spec.author       = 'Prosper Marketplace, Inc.'
-  spec.source       = { :git => 'https://github.com/prosperllc/Prosper-iOS-SDK.git', :tag => 'v1.0' }
+  spec.source       = { :git => 'https://github.com/prosperllc/Prosper-iOS-SDK.git', :tag => 'v1.0.0' }
 #  spec.source_files = 'Library/*'
   spec.requires_arc = true
   spec.ios.deployment_target = '7.0'
