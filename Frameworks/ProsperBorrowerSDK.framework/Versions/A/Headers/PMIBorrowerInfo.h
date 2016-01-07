@@ -12,17 +12,17 @@
 @property (readwrite, nonatomic, strong) NSNumber *loanAmount;
 
 /**
- @abstract set the loan purpose Id. Refer the PMIBorrowerConstants.h for the value.
+ @abstract set the loan purpose Id. Refer PMIBorrowerLoanPurpose enum in PMIBorrowerConstants.h file
  */
 @property (readwrite, nonatomic, assign) NSInteger loanPurposeId;
 
 /**
- @abstract set the Credit Range Id. Refer the PMIBorrowerConstants.h for the value.
+ @abstract set the Credit Range Id. Refer PMICreditRangeType enum in PMIBorrowerConstants.h file
  */
 @property (readwrite, nonatomic, assign) NSInteger creditRangeId;
 
 /**
- @abstract set the employmentStatusId. Refer the PMIBorrowerConstants.h for the value.
+ @abstract set the employmentStatusId. Refer PMIEmploymentStatus enum in PMIBorrowerConstants.h file
  */
 @property (readwrite, nonatomic, assign) NSInteger employmentStatusId;
 
@@ -70,5 +70,58 @@
  @abstract set the email of the borrower.
  */
 @property (readwrite, nonatomic, strong) NSString *email;
+
+
+//----------------------- Below are the Optional fields  --------------------------------//
+
+/**
+ @abstract set the primaryPhoneNumber.
+ */
+@property (readwrite, nonatomic, strong) NSString *primaryPhoneNumber;
+
+/**
+ @abstract set the secondaryPhoneNumber. This is not mandatory
+ */
+@property (readwrite, nonatomic, strong) NSString *secondaryPhoneNumber;
+
+/**
+ @abstract set the employerName.
+ */
+@property (readwrite, nonatomic, strong) NSString *employerName;
+
+/**
+ @abstract set the employerPhoneNumber.
+ */
+@property (readwrite, nonatomic, strong) NSString *employerPhoneNumber;
+
+/**
+ @abstract set the workPhoneNumber.
+ */
+@property (readwrite, nonatomic, strong) NSString *workPhoneNumber;
+
+/**
+ @abstract set the employerStartDate. [MM/YYYY]
+ */
+@property (readwrite, nonatomic, strong) NSString *employerStartDate;
+
+/**
+ @abstract set the occupation type values. Refer PMIOccupationType enum in PMIBorrowerConstants.h file
+ */
+@property (readwrite, nonatomic, assign) NSInteger occupationType;
+
+/**
+ @abstract set the ssn number.
+ */
+@property (readwrite, nonatomic, strong) NSString *ssnNumber;
+
+/**
+ @abstract set the bank account number.
+ */
+@property (readwrite, nonatomic, strong) NSString *bankAccountNumber;
+
+/**
+ @abstract set the bank routing number.
+ */
+@property (readwrite, nonatomic, strong) NSString *bankRoutingNumber;
 
 @end

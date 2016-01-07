@@ -6,7 +6,9 @@
 
 
 #import <UIKit/UIKit.h>
+#import <ProsperBorrowerSDK/ProsperBorrowerSDK.h>
 
-@interface WelcomeViewController : UIViewController
+
+@interface WelcomeViewController : UIViewController<PMIBorrowerDelegate>
 
 @end

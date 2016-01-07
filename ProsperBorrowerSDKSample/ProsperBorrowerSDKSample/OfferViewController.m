@@ -35,8 +35,8 @@
     NSString *loanStatus = @"";
     if(status == PMIBorrowerLoanSuccess) {
         loanStatus = @"Loan is successfully processed.";
-    } else if(status == PMIBorrowerLoanFailed) {
-        loanStatus = @"Loan Process got failed";
+    } else if(status == PMIBorrowerLoanCancelled) {
+        loanStatus = @"Loan Process got cancelled";
     } else if(status == PMIBorrowerTimedOut) {
         loanStatus = @"Loan Process got timed out due to inactive user session";
     }

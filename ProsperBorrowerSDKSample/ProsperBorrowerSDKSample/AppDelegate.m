@@ -8,6 +8,8 @@
 #import "AppDelegate.h"
 #import "WelcomeViewController.h"
 #import "OfferViewController.h"
+#import <ProsperBorrowerSDK/ProsperBorrowerSDK.h>
+
 
 @interface AppDelegate ()
 
@@ -19,6 +21,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    
+    [PMIProsperConfig initWithClientId:@"<Your ClientId>"
+                          clientSecret:@"<Your ClientSecret>"
+                                 refMC:@"<Your refMC>"
+                                 refAC:@"<Your refAC>"
+                       prodCredentials:YES];
+
 
     UIStoryboard *thankyouStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     WelcomeViewController *mvc = [thankyouStoryBoard instantiateViewControllerWithIdentifier:@"WelcomeViewController"];

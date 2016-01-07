@@ -14,17 +14,16 @@ The SDK also uses the following frameworks/libraries:
  * AFOAuth2Manager
  * GoogleMaps
 
-These will be added when you create the CocoaPods.
-
 This release contains the following:
  * **BorrowerFramework** - folder containing the ProsperBorrowerSDK.framework and ProsperBorrowerSDK.bundle distributions.
 
  * **ProsperBorrowerSDKSample** - a sample app that demonstrates how to launch the ProsperBorrowerSDK from within an app to get a loan quote and apply for a Prosper loan. 
 
+You will install the SDK by adding a Cocoapod podfile within your project that references the Prosper Borrower SDK podspec. The podfile will automatically download the required third-party frameworks/libraries and link them to your build. It will also download the Prosper Borrower SDK (BorrowerFramework and ProsperBorrowerSDKSample), placing it into your project.
 
 
 ## Before you get started...
-There's just a couple of things you need to do before you can go live with the Prosper Borrower SDK. It's not much, but it'll make your experience easier.
+There are just a couple of things you need to do before you can go live with the Prosper Borrower SDK. It's not much, but it'll make your experience easier.
 
 1. Get client keys from Prosper.
   Just contact us at mobileSDK@prosper.com and request keys for testing the SDK with your app.
@@ -39,33 +38,37 @@ There's just a couple of things you need to do before you can go live with the P
 The last two keys associate your app as the referring partner when we generate a Prosper loan listing. Without these keys, you won't get very far. We'll tell you where to set them a little later in this guide.
 
 2. Follow the instructions for installing and integrating the SDK in this guide. 
+  
+  You install the SDK by adding a Cocoapod podfile within your project that references the Prosper Borrower SDK podspec. The podfile will automatically download the required third-party frameworks/libraries and link them to your build. It will also download the Prosper Borrower SDK, placing it into your project. 
 
 3. Test your integration on the Prosper Sandbox environment.
   
   The keys you received in step 1 above work on the Prosper Sandbox environment. All of your initial testing will happen on our Sandbox environment, which is a mirror of our Production environment.   
   
-  When everything is working well end to end, drop us another email with a request for Production keys to go live! This new set of keys are configured to work on the Prosper Production environment. Again, these keys will work for both the iOS and Android versions of the Prosper Borrower SDK.
+  When everything is working well end to end, drop us another email with a request for Production keys to go live. This new set of keys are configured to work on the Prosper Production environment. Again, these keys will work for both the iOS and Android versions of the Prosper Borrower SDK.
 
-4. Update your new Production keys in the SDK settings to go live on the Production environment.
+4. Update your new Production keys in the SDK initialization method to go live on the Production environment.
 
 
 
 # SDK User Flows 
  
-## User flow one: Prosper Borrower SDK collects user information
-The diagram below shows the flow between your app and the Prosper Borrower SDK throughout the loan offer and application process. In this flow, your app does not collect user information required to generate loan offers through Prosper. Instead, your app launches the Borrower SDK, leaving user information collection and loan offer display and selection to the Prosper Borrower SDK.  
+## User flow one: Prosper Borrower SDK displays loan offers after collecting user info   
+The diagram below shows the flow between your app and the Prosper Borrower SDK throughout the loan offer and application process. In this flow, your app does not collect the user information required to generate loan offers through Prosper. Instead, your app launches the Borrower SDK, leaving user information collection and loan offer display and selection to the Prosper Borrower SDK. 
 
-![User flow diagram for when the SDK collects user information](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/ProsperBorrowerSDKFlowDiagramNoOfferInfo.png)
+Note: in this flow, you may have some information about the user that you can send to Prosper, but you may not have all required information to generate offers and display them within your app.   
+
+![User flow diagram for when the SDK collects user information](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/ProsperBorrowerSDKFlowDiagramIncompleteOfferInfo.png)
 
 
-## User flow two: Your app collects user information
+## User flow two: Your app collects user information and displays loan offers
 The diagram below shows the flow between your app and the Prosper Borrower SDK throughout the loan offer and application process. In this flow, your app collects user information required to generate loan offers through Prosper. You pass this user information to the Prosper Borrower SDK. Prosper generates a list of personalized loan offers you can present to the user. You then launch the Borrower SDK when the user selects from the list of personalized loan offers.
 
-![User flow diagram for when your app collects user information](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/ProsperBorrowerSDKFlowDiagramNoComp.png)
+![User flow diagram for when your app collects user information](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/ProsperBorrowerSDKFlowDiagramCompleteOffer.png)
 
 # Consumer experience in your app with the Prosper SDK
 
-The following screenshots show the flow of the Prosper Borrower SDK on iOS. The first image represents a partner app displaying a list of personalized loan offers to a customer. Once the customer selects a loan offer, your app launches the Prosper Borrower SDK, allowing the customer to complete the loan application.
+The following screenshots show the flow of the Prosper Borrower SDK on iOS. The first image represents an app displaying a list of personalized loan offers to a customer. Once the customer selects a loan offer, the app launches the Prosper Borrower SDK, allowing the customer to complete the loan application.
 
 ![Prosper Borrower SDK for iOS screenshots](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/iOSScreenshots.png)
 
@@ -73,14 +76,15 @@ Here's the Prosper Borrower SDK in action on the iOS platform.
 
 ![Demo] (https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/iOS.gif)
 
-# Installing third-party dependency libraries using CocoaPods
+# Installing the Prosper Borrower SDK using CocoaPods
 Before you can integrate the Prosper Borrower SDK into your app, you must use CocoaPods to download and install third-party libraries that the Prosper Borrower SDK is dependent on. 
+
 These are:
  * AFNetworking
  * AFOAuth2Manager
  * GoogleMaps
 
-CocoaPods is an open-source dependency manager for Objective-C, which automates and simplifies the process of using third-party libraries like AFNetworking in your projects.
+CocoaPods is an open-source dependency manager for iOS apps, which automates and simplifies the process of using third-party libraries like AFNetworking in your projects.
 
 **Note:** If you already have CocoaPods installed, you can skip to Step 2.
 
@@ -100,52 +104,30 @@ Project dependencies to be managed by CocoaPods are specified in a file called P
  $ open -a Xcode Podfile
 ```
 
-Copy and paste the following lines into the Podfile:
+Copy and paste the following lines into the Podfile. This references the ProsperBorrowerSDK podspec:
 
 ```
 source 'https://github.com/CocoaPods/Specs.git' 
 platform :ios, '7.0'
 
-# https://github.com/AFNetworking/AFNetworking
-pod "AFNetworking", "~> 2.6.2"
-
-# https://github.com/AFNetworking/AFOAuth2Manager
-pod "AFOAuth2Manager", "~> 2.2.0"
-pod 'GoogleMaps’
+pod 'ProsperBorrowerSDK'
 ```
 
-# Installing the Prosper Borrower SDK
-The Prosper Borrower SDK for iOS is a framework you add to your Xcode project. 
+**Step 3: Install Dependencies and bring the SDK into your project**
 
-**Add the Prosper Borrower SDK to your project:**
-  1. In the **Project Navigator**, expand the BorrowerFramework folder.
-  2. Drag the ProsperBorrowerSDK.framework and the ProsperBorrowerSDK.bundle from the BorrowerFramework folder to **Frameworks**.
-  3. Make the following selections in the dialog that appears: 
-    * Under **Destination**, uncheck **Copy items if needed**. 
-    This references the Prosper Borrower SDK where you installed it rather than copying the Prosper Borrower SDK into your app.
-    * Under **Added folders**, choose **Create groups**.
+The last step in installing the SDK is to run pod install. 
 
-    ![Screenshot of the Add frameworks options dialog in XCode](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/MoneyConnectScreenshotResized.png)
+```
+$ pod install
+```
 
+This will pull in the third-party libraries/frameworks, link them, install the Prosper Borrower SDK BorrowerFramework and ProsperBorrowerSDKSample files in your project, and either create or update an Xcode workspace for your project <_YourProjectName_>.xcworkspace.   
 
-## Link frameworks and libraries to your build
-Add the following frameworks and libraries linked into your application. These frameworks can be added in Xcode under the project target's **General** settings tab, in the **Linked Frameworks and Libraries** section. Click the **+** button, and add the following frameworks and libraries:
- * SystemConfiguration.framework
- * libsqllite3.0.dylib
-
-    ![Screenshot of the Link frameworks and libraries dialog in XCode](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/xCodeFrameworksAndLibrariesResized.png)
+Going forward, you should open this Xcode workspace when working.
 
 
-## Configure your Prosper client id and secret
-When you became a registered referral partner with Prosper Marketplace, you should have received a clientId and clientSecret in your welcome email.
-Create the following keys as Strings in your project’s info.plist file:
- * prosperAppID: &lt;Client_Id_provided&gt;
- * prosperSecretID: &lt;Client_Secret_provided&gt;
- * refMC: &lt;Ref_AC_provided&gt;
- * refAC: &lt;Ref_MC_provided&gt;
 
-When invoked, the Prosper Borrower SDK will use these keys in the info.plist file to authenticate your client. These keys also associate your client as the referring partner when we generate a Prosper loan listing.
-
+## Set the Enable Bitcode setting to "No" in your project's Build Options  
 
 
 ## Import the ProsperBorrowerSDK header file in your project
@@ -156,19 +138,58 @@ You should import the ProsperBorrowerSDK header file anywhere within your app wh
 #import <ProsperBorrowerSDK/ProsperBorrowerSDK.h>
 ```
 
-## Include Prosper SDK Omniture tracking configuration information
-Add the following to your app’s didFinishLaunchingWithOptions method. This ensures the Prosper Borrower SDK Omniture tracking configuration is loaded before you initialize the SDK:
+
+
+
+
+
+
+## Include client authentication and Omniture tracking configuration information to the SDK initialization method
+Add the following to your app’s didFinishLaunchingWithOptions method. This ensures the Prosper Borrower SDK Omniture tracking configuration is loaded before you initialize the SDK and you have the correct authentication values for the Prosper environment in which you are launching the SDK:
+
+Initializing SDK configuration settings using Objective C:
 
 ```
-[PMIProsperConfig initializeConfigParameters];
+// Initialize the Prosper Config parameters on the Production environment
+  [PMIProsperConfig initWithClientId:@"<your_prod_client_id>"
+                        clientSecret:@"<your_prod_client_secret>"
+                        refMC:@"<your_REF_mc>"
+                        refAC:@"<your_REF_mc>"
+                        prodCredentials:YES];
 ```
+
+
+Initializing SDK configuration settings using Swift:
+
+```
+// Initialize the Prosper Config parameters on the Production environment
+   PMIProsperConfig.initWithClientId("<your_prod_client_id>", clientSecret: "<your_prod_client_secret>", refMC: "<your_REF_mc>", refAC: "<your_REF_mc>",
+    prodCredentials: true)
+```
+
+In the above example prodCredentials will take one of the following values
+
+| Language | Possible values for prodCredentials |
+| ------------- | ------------- |
+| Objective C | YES &#124; NO |
+| Swift | true &#124; false |
+
+If set to “NO” or “false”, when the client is launched, the SDK will point to Prosper’s Sandbox environment for authentication and API requests.
+
+If set to “YES” or “true”, when the client is launched, the SDK will point to Prosper’s Production environment for authentication and API requests.
+
+
 
 
 You’re all set! At this point, the Prosper Borrower SDK is installed and set up. You can now invoke the Prosper Borrower SDK and get personalized loan offers for users through Prosper.
 
 
-# Get Prosper loan offers for a user
-To generate personalized loan offers for a user, Prosper requires 13 pieces of information about the loan applicant:
+# Collecting user details for Prosper loan offers
+To generate personalized loan offers for a user, Prosper requires 13 pieces of information about the loan applicant. 
+
+We'll tell you how to send this information to the SDK a bit later, but this list can help you decide whether you want to collect this information from your app, or let the SDK collect the information. Even if you have a small subset of this information, it may help to pass it to the SDK to speed the loan application process. 
+
+User info required to generate loan offers:  
  * Loan Amount
  * Loan Purpose
  * Self-Reported Credit Score
@@ -183,28 +204,116 @@ To generate personalized loan offers for a user, Prosper requires 13 pieces of i
  * Employment Status
  * Annual Income
  
+To speed up the creation of a loan listing, Prosper can also accept additional information about the loan applicant:
+ * Primary phone number
+ * Secondary phone number
+ * Employer name
+ * Employer phone number
+ * Employer start date
+ * Occupation type
+ * Social security number
+ * Bank account number
+ * Bank routing number
+
 
 ## Select the user flow that best matches your development needs.
 
 There are two user flows to choose from, described previously: 
- * **Prosper Borrower SDK collects user information** – You either cannot or do not want to collect the above information from users within your app. You are OK with relinquishing control to the Prosper Borrower SDK for collecting this information, and displaying the personalized loan offers to the user. 
+ * **Prosper Borrower SDK displays loan offers after collecting borrower info** – You either cannot or do not want to collect the 13 required pieces of information from users within your app. You are OK with relinquishing control to the Prosper Borrower SDK for collecting this information, and displaying the personalized loan offers to the user. 
 
-  In this case, you will initialize the Prosper Borrower SDK, passing in a nil value for a selected offer. The Prosper Borrower SDK takes care of the rest.
+  In this case, you will initialize the Prosper Borrower SDK, passing in a nil value for user details. The Prosper Borrower SDK takes care of the rest.
   
- * **Your app collects user information** – You may want to have tight control over how (and how many) loan offers are presented to your users. Prosper provides the PMIProspectOffersAPIService API to get a list of personalized loan offers you can present to your users. 
+  **Note:** If your app has collected a subset of the 13 required fields (or additional fields), you can pass them to the SDK, and the SDK will collect any missing information. 
+  
+ * **Your app collects user information and displays loan offers** – You may want to have tight control over how (and how many) loan offers are presented to your users. Prosper provides the PMIProspectOffersAPIService API to get a list of personalized loan offers you can present to your users. 
 
   In this case, you will collect the information above, construct a PMIBorrowerInfo object with this information, and pass the object in a call to the PMIProspectOffersAPIService API. You can then display one or more personalized loan offers returned by the API within your app. When a user selects the offer, you will launch the SDK with that selected loan offer. The Prosper Borrower SDK will take care of the rest.
 
 
-## Prosper Borrower SDK collects user information
-If you cannot or do not want to collect the 13 pieces of user information to generate Prosper loan offers, you can launch the Borrower SDK, allowing Prosper to collect this information, and present the loan offers to the user.
+## Prosper Borrower SDK displays loan offers after collecting user info
+If you cannot or do not want to collect all 13 pieces of user information to generate Prosper loan offers, you can launch the Borrower SDK, allowing the Prosper Borrower SDK to collect this information and present the loan offers to the user.
 
-In this case, you will initialize the SDK with the offer set to nil:
+**Passing no user information fields**
+
+The following example shows the first case, where you are passing no borrower info fields to the SDK.
+
+**Using Objective C:**
+
+You will initialize the SDK with the initWithDetails method input set to nil:
 
 ```
-PMIBorrowerViewController *controller = [[PMIBorrowerViewController alloc] initWithOffer: nil delegate:self];
+PMIBorrowerViewController *borrowerViewController = [[PMIBorrowerViewController alloc] initWithDetails:nil delegate:self];
    [self presentViewController:controller animated:YES completion:nil];
-```    
+```
+
+**Using Swift:**
+
+You will initialize the SDK with the details set to nil:
+
+```
+let borrowerViewController =  PMIBorrowerViewController.init(details: nil, delegate: self)
+        self.presentViewController(borrowerViewController, animated: true, completion: nil)
+```
+
+The Prosper Borrower SDK will then take control, guiding the user through several screens, collecting the 13 pieces of information, requesting that the user create a Prosper account, and presenting a set of pre-approved personalized loan offers the user can select from.
+
+
+**Passing some user information fields**
+In the case where you are passing some of the 13 user info fields (and possibly some additional fields), you will initialize the SDK passing a requestParams object of type PMIBorrowerInfo to the initWithDetails method:
+
+Once you collect this information from your user, you construct a PMIBorrowerInfo object for the loan applicant.
+
+**Using Object C:**
+
+```
+// Only some of the required user info fields were collected
+PMIBorrowerInfo *borrowerInfo = [[PMIBorrowerInfo alloc] init];
+   borrowerInfo.loanAmount = @20000;
+   borrowerInfo.firstName = @"Mary";
+   borrowerInfo.lastName = @"Hopkins";
+   borrowerInfo.address1 = @"912 PINELAND AVE APT 33";
+   borrowerInfo.city = @"Hinesville";
+   borrowerInfo.state = @"GA";
+   borrowerInfo.zipCode = @"31313";
+   borrowerInfo.email = @"testProsper@domain.com";
+// And one additional user info field was collected
+   borrowerInfo.occupationType = PMIDoctor;
+```
+
+**Using Swift:**
+
+```
+// Only some of the required borrower info fields were collected
+let borrowerInfo:PMIBorrowerInfo = PMIBorrowerInfo.init()
+   borrowerInfo.loanAmount = 20000
+   borrowerInfo.firstName = "Mary"
+   borrowerInfo.lastName = "Hopkins"
+   borrowerInfo.address1 = "912 PINELAND AVE APT 33"
+   borrowerInfo.city = "Hinesville"
+   borrowerInfo.state = "GA"
+   borrowerInfo.zipCode = "31313"
+   borrowerInfo.email = "testProsper@domain.com"
+// And one additional user info field was collected
+   borrowerInfo.occupationType = PMIDoctor.rawValue
+```
+
+**Note:** For a full list of values that can be entered for loanPurposeId, employmentStatusId creditRangeId, and occupationType, refer to the PMIBorrowerConstants.h file in the Headers directory of the ProsperBorrowerSDK framework.
+
+
+**Using Objective C:**
+
+```
+PMIBorrowerViewController *borrowerViewController = [[PMIBorrowerViewController alloc] initWithDetails:requestParams delegate:self];
+   [self presentViewController:controller animated:YES completion:nil];
+```
+
+**Using Swift:**
+
+```
+let borrowerViewController =  PMIBorrowerViewController.init(details: borrowerInfo, delegate: self)
+   self.presentViewController(borrowerViewController, animated: true, completion: nil)
+```
+
 
 The Prosper Borrower SDK will then take control, guiding the user through several screens, collecting the 13 pieces of information, requesting that the user create a Prosper account, and presenting a set of pre-approved personalized loan offers the user can select from. 
 
@@ -216,7 +325,7 @@ Once the loan offer is selected, the Prosper Borrower SDK guides the user throug
 
 
 
-## Your app collects user information
+## Your app collects user information and displays loan offers
 The Prosper Borrower SDK provides the PMIProspectOffersAPIService API to get a list of loan offers for your users. Getting a list of loan offers is a two-step process.
 
 ### Step 1: Collect loan applicant information 
@@ -235,16 +344,30 @@ To generate the loan offers, Prosper requires 13 pieces of information about the
  * Employment Status
  * Annual Income
 
+To speed up the creation of a loan listing, Prosper will also accept additional information about the loan applicant.
+ * Primary phone number
+ * Secondary phone number
+ * Employer name
+ * Employer phone number
+ * Employer start date
+ * Occupation type
+ * Social security number
+ * Bank account number
+ * Bank routing number
+
 Once you collect this information from your user, you construct a PMIBorrowerInfo object for the loan applicant.
 
+**Using Objective C:**
+
 ```
+// Building borrower info object with 13 required fields 
 PMIBorrowerInfo *borrowerInfo = [[PMIBorrowerInfo alloc] init];
    borrowerInfo.loanAmount = @20000;
    borrowerInfo.loanPurposeId = PMIHomeImprovement;
    borrowerInfo.employmentStatusId = PMIEmployed;
    borrowerInfo.creditRangeId = PMIExcellentCredit;
-   borrowerInfo.firstName = @"Mary";
-   borrowerInfo.lastName = @"Hopkins";
+   borrowerInfo.firstName = @"Maryann";
+   borrowerInfo.lastName = @"Helmann";
    borrowerInfo.dateOfBirth = @"03/22/1984";
    borrowerInfo.address1 = @"912 PINELAND AVE APT 33";
    borrowerInfo.city = @"Hinesville";
@@ -252,12 +375,56 @@ PMIBorrowerInfo *borrowerInfo = [[PMIBorrowerInfo alloc] init];
    borrowerInfo.zipCode = @"31313";
    borrowerInfo.annualIncome = @50000;
    borrowerInfo.email = @"testProsper@domain.com";
+// Optional additional borrower info to pass to Prosper Borrower SDK
+requestParams.employerName = @"City Hospital";
+   borrowerInfo.employerPhoneNumber = @"4155550199";
+   borrowerInfo.workPhoneNumber = @"4155550100";
+   borrowerInfo.employerStartDate = @"04/2010";
+   borrowerInfo.occupationType = PMIDoctor;
+   borrowerInfo.ssnNumber = @"123456786";
+   borrowerInfo.bankAccountNumber = @"32423435345435";
+   borrowerInfo.bankRoutingNumber = @"121000248";
 ```
 
-**Note:** For a full list of values that can be entered for loanPurposeId, employmentStatusId and creditRangeId, refer to the PMIBorrowerConstants.h file in the Headers directory of the ProsperBorrowerSDK framework.
+**Using Swift**
+
+```
+// Building borrower info object with 13 required fields
+let borrowerInfo:PMIBorrowerInfo = PMIBorrowerInfo.init()
+   borrowerInfo.loanAmount = 20000
+   borrowerInfo.loanPurposeId = PMIHomeImprovement.rawValue
+   borrowerInfo.creditRangeId = PMIExcellentCredit.rawValue
+   borrowerInfo.firstName = "Maryann"
+   borrowerInfo.lastName = "Helmann"
+   borrowerInfo.dateOfBirth = "03/22/1984"
+   borrowerInfo.address1 = "912 PINELAND AVE APT 33"
+   borrowerInfo.city = "Hinesville"
+   borrowerInfo.state = "GA"
+   borrowerInfo.zipCode = "31313"
+   borrowerInfo.annualIncome = 50000
+   borrowerInfo.employmentStatusId = PMIEmployed.rawValue
+   borrowerInfo.email = "testProsper@domain.com"
+// Optional additional borrower info to pass to Prosper Borrower SDK
+   borrowerInfo.primaryPhoneNumber = "4088029656"
+   borrowerInfo.secondaryPhoneNumber = "4088029658"
+   borrowerInfo.employerName = "City Hospital"
+   borrowerInfo.employerPhoneNumber = "4155550199"
+   borrowerInfo.workPhoneNumber = "4155550100"
+   borrowerInfo.employerStartDate = "04/2010"
+   borrowerInfo.occupationType = PMIDoctor.rawValue
+   borrowerInfo.ssnNumber = "123456789"
+   borrowerInfo.bankAccountNumber = "32423435345435"
+   borrowerInfo.bankRoutingNumber = "121000248"
+```
+
+
+
+**Note:** For a full list of values that can be entered for loanPurposeId, employmentStatusId, creditRangeId, and occupationType, refer to the PMIBorrowerConstants.h file in the Headers directory of the ProsperBorrowerSDK framework.
 
 ### Step 2. Call the PMIProspectOffersAPIService to get loan offers
 In this step, you will pass the PMIBorrowerInfo (borrowerInfo) object you constructed in Step 1 to get a list of Prosper loan offers.
+
+**Using Objective C:**
 
 ```
  [PMIProspectOffersAPIService getLoanOffers:borrowerInfo withCompletionBlock:^(PMIProspectOffersResponse *servicesRespObj) {
@@ -278,6 +445,26 @@ In this step, you will pass the PMIBorrowerInfo (borrowerInfo) object you constr
     }];
 ```
 
+**Using Swift:**
+
+```
+PMIProspectOffersAPIService.getLoanOffers(borrowerInfo, withCompletionBlock: { 
+(offersResponse:PMIProspectOffersResponse!) -> Void in
+         self.loadingView.hidden = true
+          
+         if let offerList:PMILoanOfferList = offersResponse.loanOfferList {
+        } 
+    else {
+         let alert:UIAlertView = UIAlertView(title: "Error",
+            message:offersResponse.responseError.getErrorDescription(),
+            delegate: nil,
+            cancelButtonTitle: "Ok")
+        alert.show()
+     }
+
+  })
+```
+
 The code above returns an Offers list object. The list contains different loan offers for which the user has been pre-approved. These offers range between different interest rates, APRs and length of term. It is up to your development team to determine the offers to display to the user. If the call is unsuccessful, you will receive an error from the PMILoanOffersAPIService.
 
 ### User selects loan offer
@@ -285,11 +472,26 @@ Once the user selects the offer, you pass the selected offer to the PMIBorrowerV
 
 To access a particular offer by index, you can do something like this in the OffersCallback success. In the following code, the first offer has been selected:
 
+**Using Objective C:**
+
 ```
- PMILoanOffer *userSelectedoffer = [offers objectAtIndex:0];
- PMIBorrowerViewController *controller = [[PMIBorrowerViewController alloc] initWithOffer: userSelectedoffer delegate:self];
+PMILoanOffer *userSelectedoffer = [offers objectAtIndex:0];
+PMIBorrowerViewController *controller = [[PMIBorrowerViewController alloc] initWithOffer: userSelectedoffer delegate:self];
    [self presentViewController:controller animated:YES completion:nil];
 ```
+
+**Using Swift:**
+
+```
+  let offer:PMILoanOffer = offers[0] as! PMILoanOffer
+
+  let viewController:OfferViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OfferViewController") as! OfferViewController
+        viewController.loanOffer = offer
+
+  self.navigationController?.pushViewController(viewController, animated: true)
+```
+
+
 
 ### User completes the Prosper loan offer
 Pre-approved loan offers generated by the Prosper Borrower SDK require user consent and user acceptance of the Prosper Marketplace Terms and Conditions for the loan to become an active listing for funding. The Prosper Borrower SDK guides the user through the process, displaying Prosper Marketplace Terms and Conditions and requiring consent and acceptance as part of the user experience.
@@ -297,26 +499,63 @@ Pre-approved loan offers generated by the Prosper Borrower SDK require user cons
 # Adding delegate methods
 Your view controller should conform to the PMIBorrowerDelegate protocol and implement the delegate methods.
 
+**Using Obejctive C:**
+
 ```
 @interface PMIBorrowerViewController :UIViewcontroller <PMIBorrowerDelegate>  
   
 @end
 ```
 
+**Using Swift:**
+
+```
+class OfferViewController: UIViewController, PMIBorrowerDelegate {
+}
+```
+
 Add the following PMIBorrowerDelegate method to your view controller. This method is called after the PMIBorrowerViewController is closed, giving status.
+
+**Objective C:**
 
 ```
 - (void)borrowerViewController:(PMIBorrowerViewController *)borrowerViewController loanProcessedStatus:(BorrowerLoanStatus)status
  {
    if(status == BorrowerLoanSuccess) {
-       NSLog(@“Loan was successfully processed.”);
-   } else if(status == BorrowerLoanFailed) {
-       NSLog(@“Loan process failed”);
+       NSLog(@"Loan application was successfully processed.");
+   } else if(status == PMIBorrowerLoanCancelled) {
+       NSLog(@"Loan application process cancelled");
    } else if(status == BorrowerTimedOut) {
-       NSLog(@"Loan process timed out due to an inactive user session”);
+       NSLog(@"Loan process timed out due to an inactive user session");
    }
  }
 ```
+
+
+**Using Swift:**
+
+```
+func borrowerViewController(borrowerViewController:PMIBorrowerViewController, loanProcessedStatus loanStatus:BorrowerLoanStatus) {
+    var status:String = ""
+      if loanStatus == PMIBorrowerLoanSuccess {
+         status = "Loan application was successfully processed."
+      } else if loanStatus == PMIBorrowerLoanCancelled {
+         status = "Loan application process cancelled."
+       } else if loanStatus == BorrowerTimedOut {
+         status = "Loan process timed out due to an inactive user session."
+    }
+    
+     let alert:UIAlertView = UIAlertView(title: "Alert",
+        message: status,
+        delegate: nil,
+        cancelButtonTitle: "Cancel")
+      alert.show()
+      
+      self.navigationController?.popToRootViewControllerAnimated(true)
+}
+```
+
+
 
 # Sample app
 A sample app can be found in the ProsperBorrowerSDKSample folder. The sample app demonstrates how to integrate the Prosper Borrower SDK. 

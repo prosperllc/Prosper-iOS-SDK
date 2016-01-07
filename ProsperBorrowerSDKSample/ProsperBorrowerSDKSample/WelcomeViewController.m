@@ -54,7 +54,6 @@
     self.documentationLabel.attributedText = [[NSMutableAttributedString alloc] initWithString:documentationText
                                                                                     attributes:attributes];
 
-    
     self.title = @"Sample App";
 }
 
@@ -84,7 +83,7 @@
 
 - (IBAction)prosperFunnelButtonClicked:(id)sender {
     
-    PMIBorrowerViewController *borrowerViewController = [[PMIBorrowerViewController alloc] initWithOffer:nil delegate:self];
+    PMIBorrowerViewController *borrowerViewController = [[PMIBorrowerViewController alloc] initWithDetails:nil delegate:self];
     [self presentViewController:borrowerViewController animated:YES completion:nil];
 }
 
@@ -140,6 +139,25 @@
         // 13
         requestParams.email = [NSString stringWithFormat:@"TestUser20151019%d@gmail.com",number];
         
+        
+        // Optional fields
+        requestParams.primaryPhoneNumber = @"4088029656";
+        requestParams.secondaryPhoneNumber = @"4088029658";
+        
+        requestParams.employerName = @"Employer Name";
+        requestParams.employerPhoneNumber = @"4088029876";
+        requestParams.workPhoneNumber = @"4088029878";
+        
+        requestParams.employerStartDate = @"04/2010";
+        requestParams.occupationType = PMIDoctor;
+        
+        requestParams.ssnNumber = @"123456786";
+        
+        requestParams.bankAccountNumber = @"32423435345435";
+        
+        requestParams.bankRoutingNumber = @"121000248";
+
+        
         self.loadingView.hidden = NO;
         
         [PMIProspectOffersAPIService getLoanOffers:requestParams withCompletionBlock:^(PMIProspectOffersResponse *servicesRespObj) {
@@ -176,5 +194,28 @@
         }];
     }
 }
+
+#pragma mark - PMIBorrowerDelegate methods
+
+- (void)borrowerViewController:(PMIBorrowerViewController *)borrowerViewController loanProcessedStatus:(BorrowerLoanStatus)status {
+    NSString *loanStatus = @"";
+    if(status == PMIBorrowerLoanSuccess) {
+        loanStatus = @"Loan is successfully processed.";
+    } else if(status == PMIBorrowerLoanCancelled) {
+        loanStatus = @"Loan Process got cancelled";
+    } else if(status == PMIBorrowerTimedOut) {
+        loanStatus = @"Loan Process got timed out due to inactive user session";
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert"
+                                                    message:loanStatus
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil];
+    [alert show];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 @end
