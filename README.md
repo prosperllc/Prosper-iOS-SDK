@@ -126,10 +126,6 @@ This will pull in the third-party libraries/frameworks, link them, install the P
 Going forward, you should open this Xcode workspace when working.
 
 
-
-## Set the Enable Bitcode setting to "No" in your project's Build Options  
-
-
 ## Import the ProsperBorrowerSDK header file in your project
 You should import the ProsperBorrowerSDK header file anywhere within your app where you may want to call the Prosper Borrower SDK.
  
