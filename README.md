@@ -3,7 +3,7 @@
 # Overview
 The Prosper Borrower SDK is a native SDK that allows your customers to apply for a loan within your app in a seamless and convenient way.
 
-With the Prosper Borrower SDK, you can refer your customers to receive loan offers through Prosper. After receiving the loan offer, the customer can select that offer, create a Prosper account, and complete a loan application immediately. After the loan application has been completed, Prosper initiates loan verification and generates a loan listing for funding by Prosper investors. 
+With the Prosper Borrower SDK, you can refer your users to receive loan offers through Prosper. After receiving the loan offers, the customer can select that offer, create a Prosper account, and complete a loan application immediately. After the loan application has been completed, Prosper initiates loan verification and generates a loan listing for funding by Prosper investors. 
 
 ## Prosper Borrower SDK requirements
 The Prosper Borrower SDK supports iOS 7 or higher versions.
@@ -35,7 +35,7 @@ There are just a couple of things you need to do before you can go live with the
    *  Ref_MC
 
   The first two keys are tied to your app when making API calls. They are used to authenticate your app. 
-The last two keys associate your app as the referring partner when we generate a Prosper loan listing. Without these keys, you won't get very far. We'll tell you where to set them a little later in this guide.
+The last two keys associate your app as the referring partner when we generate a Prosper loan listing. Without these keys, you won't get very far. We'll show you where to set them a little later in this guide.
 
 2. Follow the instructions for installing and integrating the SDK in this guide. 
   
@@ -58,7 +58,7 @@ The diagram below shows the flow between your app and the Prosper Borrower SDK t
 
 Note: in this flow, you may have some information about the user that you can send to Prosper, but you may not have all required information to generate offers and display them within your app.   
 
-![User flow diagram for when the SDK collects user information](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/ProsperBorrowerSDKFlowDiagramIncompleteOfferInfo.png)
+![User flow diagram for when the Prosper Borrower SDK collects user information](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/ProsperBorrowerSDKFlowDiagramIncompleteOfferInfo.png)
 
 
 ## User flow two: Your app collects user information and displays loan offers
@@ -136,10 +136,6 @@ You should import the ProsperBorrowerSDK header file anywhere within your app wh
 
 
 
-
-
-
-
 ## Include client authentication and Omniture tracking configuration information to the SDK initialization method
 Add the following to your app’s didFinishLaunchingWithOptions method. This ensures the Prosper Borrower SDK Omniture tracking configuration is loaded before you initialize the SDK and you have the correct authentication values for the Prosper environment in which you are launching the SDK:
 
@@ -180,10 +176,10 @@ If set to “YES” or “true”, when the client is launched, the SDK will poi
 You’re all set! At this point, the Prosper Borrower SDK is installed and set up. You can now invoke the Prosper Borrower SDK and get personalized loan offers for users through Prosper.
 
 
-# Collecting user details for Prosper loan offers
+# Collecting loan applicant information for Prosper loan offers
 To generate personalized loan offers for a user, Prosper requires 13 pieces of information about the loan applicant. 
 
-We'll tell you how to send this information to the SDK a bit later, but this list can help you decide whether you want to collect this information from your app, or let the SDK collect the information. Even if you have a small subset of this information, it may help to pass it to the SDK to speed the loan application process. 
+We'll show you how to send this information to the SDK a bit later, but this list can help you decide whether you want to collect this information from your app, or let the SDK collect the information. Even if you have a small subset of this information, it may help to pass it to the SDK to speed the loan application process. 
 
 User info required to generate loan offers:  
  * Loan Amount
@@ -261,45 +257,75 @@ Once you collect this information from your user, you construct a PMIBorrowerInf
 
 **Using Object C:**
 
-```
-// Only some of the required user info fields were collected
+``` 
+// Full object with required 13 fields shown. 
+// In your case, only some of the required user info fields collected
 PMIBorrowerInfo *borrowerInfo = [[PMIBorrowerInfo alloc] init];
    borrowerInfo.loanAmount = @20000;
-   borrowerInfo.firstName = @"Mary";
-   borrowerInfo.lastName = @"Hopkins";
+   borrowerInfo.loanPurposeId = PMIHomeImprovement;
+   borrowerInfo.employmentStatusId = PMIEmployed;
+   borrowerInfo.creditRangeId = PMIExcellentCredit;
+   borrowerInfo.firstName = @"Maryann";
+   borrowerInfo.lastName = @"Helmann";
+   borrowerInfo.dateOfBirth = @"03/22/1984";
    borrowerInfo.address1 = @"912 PINELAND AVE APT 33";
    borrowerInfo.city = @"Hinesville";
    borrowerInfo.state = @"GA";
    borrowerInfo.zipCode = @"31313";
-   borrowerInfo.email = @"testProsper@domain.com";
-// And one additional user info field was collected
+   borrowerInfo.annualIncome = @75000;
+   borrowerInfo.email = @"user@somedomain.com";
+// Optional additional borrower info to pass to Prosper Borrower SDK
+   borrowerInfo.primaryPhoneNumber = "4085550175"
+   borrowerInfo.secondaryPhoneNumber = "4085550235"
+   borrowerInfo.employerName = @"City Hospital";
+   borrowerInfo.employerPhoneNumber = @"4085550199";
+   borrowerInfo.workPhoneNumber = @"4085550100";
+   borrowerInfo.employerStartDate = @"04/2010";
    borrowerInfo.occupationType = PMIDoctor;
+   borrowerInfo.ssnNumber = @"123456789";
+   borrowerInfo.bankAccountNumber = @"32423435345435";
+   borrowerInfo.bankRoutingNumber = @"121000248";
 ```
 
 **Using Swift:**
 
 ```
-// Only some of the required borrower info fields were collected
+// Full object with required 13 fields shown. 
+// In your case, only some of the required user info fields collected
 let borrowerInfo:PMIBorrowerInfo = PMIBorrowerInfo.init()
    borrowerInfo.loanAmount = 20000
-   borrowerInfo.firstName = "Mary"
-   borrowerInfo.lastName = "Hopkins"
+   borrowerInfo.loanPurposeId = PMIHomeImprovement.rawValue
+   borrowerInfo.creditRangeId = PMIExcellentCredit.rawValue
+   borrowerInfo.firstName = "Maryann"
+   borrowerInfo.lastName = "Helmann"
+   borrowerInfo.dateOfBirth = "03/22/1984"
    borrowerInfo.address1 = "912 PINELAND AVE APT 33"
    borrowerInfo.city = "Hinesville"
    borrowerInfo.state = "GA"
    borrowerInfo.zipCode = "31313"
-   borrowerInfo.email = "testProsper@domain.com"
-// And one additional user info field was collected
+   borrowerInfo.annualIncome = 50000
+   borrowerInfo.employmentStatusId = PMIEmployed.rawValue
+   borrowerInfo.email = "user@somedomain.com"
+// Optional additional borrower info to pass to Prosper Borrower SDK
+   borrowerInfo.primaryPhoneNumber = "4085550175"
+   borrowerInfo.secondaryPhoneNumber = "4085550235"
+   borrowerInfo.employerName = "City Hospital"
+   borrowerInfo.employerPhoneNumber = "4085550199"
+   borrowerInfo.workPhoneNumber = "4085550100"
+   borrowerInfo.employerStartDate = "04/2010"
    borrowerInfo.occupationType = PMIDoctor.rawValue
+   borrowerInfo.ssnNumber = "123456789"
+   borrowerInfo.bankAccountNumber = "32423435345435"
+   borrowerInfo.bankRoutingNumber = "121000248"
 ```
 
-**Note:** For a full list of values that can be entered for loanPurposeId, employmentStatusId creditRangeId, and occupationType, refer to the PMIBorrowerConstants.h file in the Headers directory of the ProsperBorrowerSDK framework.
+**Note:** For a full list of values that can be entered for loanPurposeId, employmentStatusId, creditRangeId, and occupationType, refer to the PMIBorrowerConstants.h file in the Headers directory of the ProsperBorrowerSDK framework.
 
 
 **Using Objective C:**
 
 ```
-PMIBorrowerViewController *borrowerViewController = [[PMIBorrowerViewController alloc] initWithDetails:requestParams delegate:self];
+PMIBorrowerViewController *borrowerViewController = [[PMIBorrowerViewController alloc] initWithDetails:borrowerInfo delegate:self];
    [self presentViewController:controller animated:YES completion:nil];
 ```
 
@@ -369,15 +395,17 @@ PMIBorrowerInfo *borrowerInfo = [[PMIBorrowerInfo alloc] init];
    borrowerInfo.city = @"Hinesville";
    borrowerInfo.state = @"GA";
    borrowerInfo.zipCode = @"31313";
-   borrowerInfo.annualIncome = @50000;
-   borrowerInfo.email = @"testProsper@domain.com";
+   borrowerInfo.annualIncome = @75000;
+   borrowerInfo.email = @"user@somedomain.com";
 // Optional additional borrower info to pass to Prosper Borrower SDK
-requestParams.employerName = @"City Hospital";
-   borrowerInfo.employerPhoneNumber = @"4155550199";
-   borrowerInfo.workPhoneNumber = @"4155550100";
+   borrowerInfo.primaryPhoneNumber = "4085550175"
+   borrowerInfo.secondaryPhoneNumber = "4085550235"
+   borrowerInfo.employerName = @"City Hospital";
+   borrowerInfo.employerPhoneNumber = @"4085550199";
+   borrowerInfo.workPhoneNumber = @"4085550100";
    borrowerInfo.employerStartDate = @"04/2010";
    borrowerInfo.occupationType = PMIDoctor;
-   borrowerInfo.ssnNumber = @"123456786";
+   borrowerInfo.ssnNumber = @"123456789";
    borrowerInfo.bankAccountNumber = @"32423435345435";
    borrowerInfo.bankRoutingNumber = @"121000248";
 ```
@@ -399,13 +427,13 @@ let borrowerInfo:PMIBorrowerInfo = PMIBorrowerInfo.init()
    borrowerInfo.zipCode = "31313"
    borrowerInfo.annualIncome = 50000
    borrowerInfo.employmentStatusId = PMIEmployed.rawValue
-   borrowerInfo.email = "testProsper@domain.com"
+   borrowerInfo.email = "user@somedomain.com"
 // Optional additional borrower info to pass to Prosper Borrower SDK
-   borrowerInfo.primaryPhoneNumber = "4088029656"
-   borrowerInfo.secondaryPhoneNumber = "4088029658"
+   borrowerInfo.primaryPhoneNumber = "4085550175"
+   borrowerInfo.secondaryPhoneNumber = "4085550235"
    borrowerInfo.employerName = "City Hospital"
-   borrowerInfo.employerPhoneNumber = "4155550199"
-   borrowerInfo.workPhoneNumber = "4155550100"
+   borrowerInfo.employerPhoneNumber = "4085550199"
+   borrowerInfo.workPhoneNumber = "4085550100"
    borrowerInfo.employerStartDate = "04/2010"
    borrowerInfo.occupationType = PMIDoctor.rawValue
    borrowerInfo.ssnNumber = "123456789"
