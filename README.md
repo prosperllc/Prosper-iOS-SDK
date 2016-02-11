@@ -234,7 +234,7 @@ You will initialize the SDK with the initWithDetails method input set to nil:
 
 ```
 PMIBorrowerViewController *borrowerViewController = [[PMIBorrowerViewController alloc] initWithDetails:nil delegate:self];
-   [self presentViewController:controller animated:YES completion:nil];
+   [self presentViewController:borrowerViewController animated:YES completion:nil];
 ```
 
 **Using Swift:**
@@ -325,7 +325,7 @@ let borrowerInfo:PMIBorrowerInfo = PMIBorrowerInfo.init()
 
 ```
 PMIBorrowerViewController *borrowerViewController = [[PMIBorrowerViewController alloc] initWithDetails:borrowerInfo delegate:self];
-   [self presentViewController:controller animated:YES completion:nil];
+   [self presentViewController:borrowerViewController animated:YES completion:nil];
 ```
 
 **Using Swift:**
@@ -545,11 +545,11 @@ Add the following PMIBorrowerDelegate method to your view controller. This metho
 ```
 - (void)borrowerViewController:(PMIBorrowerViewController *)borrowerViewController loanProcessedStatus:(BorrowerLoanStatus)status
  {
-   if(status == BorrowerLoanSuccess) {
+   if(status == PMIBorrowerLoanSuccess) {
        NSLog(@"Loan application was successfully processed.");
    } else if(status == PMIBorrowerLoanCancelled) {
        NSLog(@"Loan application process cancelled");
-   } else if(status == BorrowerTimedOut) {
+   } else if(status == PMIBorrowerTimedOut) {
        NSLog(@"Loan process timed out due to an inactive user session");
    }
  }
@@ -565,7 +565,7 @@ func borrowerViewController(borrowerViewController:PMIBorrowerViewController, lo
          status = "Loan application was successfully processed."
       } else if loanStatus == PMIBorrowerLoanCancelled {
          status = "Loan application process cancelled."
-       } else if loanStatus == BorrowerTimedOut {
+       } else if loanStatus == PMIBorrowerTimedOut {
          status = "Loan process timed out due to an inactive user session."
     }
     
