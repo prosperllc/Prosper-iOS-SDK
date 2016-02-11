@@ -10,8 +10,6 @@ The Prosper Borrower SDK supports iOS 7 or higher versions.
 You must use Xcode 7 or higher to build your project with the SDK. 
 
 The SDK also uses the following frameworks/libraries:
- * AFNetworking
- * AFOAuth2Manager
  * GoogleMaps
 
 This release contains the following:
@@ -72,16 +70,16 @@ The following screenshots show the flow of the Prosper Borrower SDK on iOS. The 
 
 ![Prosper Borrower SDK for iOS screenshots](https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/iOSScreenshots.png)
 
-Here's the Prosper Borrower SDK in action on the iOS platform.
 
-![Demo] (https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/iOS.gif)
+<!-- Here's the Prosper Borrower SDK in action on the iOS platform.
+
+![Demo] (https://github.com/prosperllc/Prosper-iOS-SDK/blob/master/doc-images/<name_of_video>)
+-->
 
 # Installing the Prosper Borrower SDK using CocoaPods
 Before you can integrate the Prosper Borrower SDK into your app, you must use CocoaPods to download and install third-party libraries that the Prosper Borrower SDK is dependent on. 
 
 These are:
- * AFNetworking
- * AFOAuth2Manager
  * GoogleMaps
 
 CocoaPods is an open-source dependency manager for iOS apps, which automates and simplifies the process of using third-party libraries like AFNetworking in your projects.
@@ -166,9 +164,9 @@ In the above example prodCredentials will take one of the following values
 | Objective C | YES &#124; NO |
 | Swift | true &#124; false |
 
-If set to “NO” or “false”, when the client is launched, the SDK will point to Prosper’s Sandbox environment for authentication and API requests.
+If set to “NO” or “false”, when the client is launched, the SDK will point to Prosper’s Sandbox environment for authentication and API requests. Use this setting during your initial integration and testing of the Prosper Borrower SDK with you app. 
 
-If set to “YES” or “true”, when the client is launched, the SDK will point to Prosper’s Production environment for authentication and API requests.
+If set to “YES” or “true”, when the client is launched, the SDK will point to Prosper’s Production environment for authentication and API requests. Use this setting when you are ready to go live with the Prosper Borrower SDK integrated into your app.
 
 
 
@@ -201,6 +199,7 @@ To speed up the creation of a loan listing, Prosper can also accept additional i
  * Secondary phone number
  * Employer name
  * Employer phone number
+ * Work phone number
  * Employer start date
  * Occupation type
  * Social security number
@@ -275,8 +274,8 @@ PMIBorrowerInfo *borrowerInfo = [[PMIBorrowerInfo alloc] init];
    borrowerInfo.annualIncome = @75000;
    borrowerInfo.email = @"user@somedomain.com";
 // Optional additional borrower info to pass to Prosper Borrower SDK
-   borrowerInfo.primaryPhoneNumber = "4085550175"
-   borrowerInfo.secondaryPhoneNumber = "4085550235"
+   borrowerInfo.primaryPhoneNumber = "4085550175";
+   borrowerInfo.secondaryPhoneNumber = "4085550235";
    borrowerInfo.employerName = @"City Hospital";
    borrowerInfo.employerPhoneNumber = @"4085550199";
    borrowerInfo.workPhoneNumber = @"4085550100";
@@ -295,6 +294,7 @@ PMIBorrowerInfo *borrowerInfo = [[PMIBorrowerInfo alloc] init];
 let borrowerInfo:PMIBorrowerInfo = PMIBorrowerInfo.init()
    borrowerInfo.loanAmount = 20000
    borrowerInfo.loanPurposeId = PMIHomeImprovement.rawValue
+   borrowerInfo.employmentStatusId = PMIEmployed.rawValue
    borrowerInfo.creditRangeId = PMIExcellentCredit.rawValue
    borrowerInfo.firstName = "Maryann"
    borrowerInfo.lastName = "Helmann"
@@ -304,7 +304,6 @@ let borrowerInfo:PMIBorrowerInfo = PMIBorrowerInfo.init()
    borrowerInfo.state = "GA"
    borrowerInfo.zipCode = "31313"
    borrowerInfo.annualIncome = 50000
-   borrowerInfo.employmentStatusId = PMIEmployed.rawValue
    borrowerInfo.email = "user@somedomain.com"
 // Optional additional borrower info to pass to Prosper Borrower SDK
    borrowerInfo.primaryPhoneNumber = "4085550175"
@@ -371,6 +370,7 @@ To speed up the creation of a loan listing, Prosper will also accept additional 
  * Secondary phone number
  * Employer name
  * Employer phone number
+ * Work phone number
  * Employer start date
  * Occupation type
  * Social security number
@@ -398,8 +398,8 @@ PMIBorrowerInfo *borrowerInfo = [[PMIBorrowerInfo alloc] init];
    borrowerInfo.annualIncome = @75000;
    borrowerInfo.email = @"user@somedomain.com";
 // Optional additional borrower info to pass to Prosper Borrower SDK
-   borrowerInfo.primaryPhoneNumber = "4085550175"
-   borrowerInfo.secondaryPhoneNumber = "4085550235"
+   borrowerInfo.primaryPhoneNumber = "4085550175";
+   borrowerInfo.secondaryPhoneNumber = "4085550235";
    borrowerInfo.employerName = @"City Hospital";
    borrowerInfo.employerPhoneNumber = @"4085550199";
    borrowerInfo.workPhoneNumber = @"4085550100";
@@ -417,6 +417,7 @@ PMIBorrowerInfo *borrowerInfo = [[PMIBorrowerInfo alloc] init];
 let borrowerInfo:PMIBorrowerInfo = PMIBorrowerInfo.init()
    borrowerInfo.loanAmount = 20000
    borrowerInfo.loanPurposeId = PMIHomeImprovement.rawValue
+   borrowerInfo.employmentStatusId = PMIEmployed.rawValue
    borrowerInfo.creditRangeId = PMIExcellentCredit.rawValue
    borrowerInfo.firstName = "Maryann"
    borrowerInfo.lastName = "Helmann"
@@ -426,7 +427,6 @@ let borrowerInfo:PMIBorrowerInfo = PMIBorrowerInfo.init()
    borrowerInfo.state = "GA"
    borrowerInfo.zipCode = "31313"
    borrowerInfo.annualIncome = 50000
-   borrowerInfo.employmentStatusId = PMIEmployed.rawValue
    borrowerInfo.email = "user@somedomain.com"
 // Optional additional borrower info to pass to Prosper Borrower SDK
    borrowerInfo.primaryPhoneNumber = "4085550175"

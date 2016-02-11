@@ -23,11 +23,11 @@
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     
-    [PMIProsperConfig initWithClientId:@"<Your ClientId>"
-                          clientSecret:@"<Your ClientSecret>"
-                                 refMC:@"<Your refMC>"
-                                 refAC:@"<Your refAC>"
-                       prodCredentials:YES];
+    [PMIProsperConfig initWithClientId:@"<your_prod_client_id>"
+                          clientSecret:@"<your_prod_client_secret>"
+                                 refMC:@"<your_REF_mc>"
+                                 refAC:@"<your_REF_ac>"
+                       prodCredentials:NO];
 
 
     UIStoryboard *thankyouStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

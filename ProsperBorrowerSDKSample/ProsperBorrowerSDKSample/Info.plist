@@ -46,13 +46,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>prosperAppID</key>
-	<string>&lt;Obtain From Prosper&gt;</string>
-	<key>prosperSecretID</key>
-	<string>&lt;Obtain From Prosper&gt;</string>
-	<key>refAC</key>
-	<string>&lt;Obtain From Prosper&gt;</string>
-	<key>refMC</key>
-	<string>&lt;Obtain From Prosper&gt;</string>
+	<key>ProsperSDKConfiguration</key>
+	<dict>
+		<key>showWelcomeScreen</key>
+		<false/>
+		<key>showThankYouScreen</key>
+		<false/>
+	</dict>
 </dict>
 </plist>

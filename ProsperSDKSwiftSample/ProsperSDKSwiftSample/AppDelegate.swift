@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        PMIProsperConfig.initWithClientId("<Your ClientId>", clientSecret: "<Your ClientSecret>", refMC: "<Your refMC>", refAC: "<Your refAC>",
-            prodCredentials: true)
+        PMIProsperConfig.initWithClientId("<your_prod_client_id>", clientSecret: "<your_prod_client_secret>", refMC: "<your_REF_mc>", refAC: "<your_REF_ac>",
+            prodCredentials: false)
         
         return true
     }

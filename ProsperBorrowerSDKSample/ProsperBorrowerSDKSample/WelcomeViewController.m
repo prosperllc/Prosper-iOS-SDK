@@ -140,7 +140,7 @@
         requestParams.email = [NSString stringWithFormat:@"TestUser20151019%d@gmail.com",number];
         
         
-        // Optional fields
+        // Below are Optional fields. Below values gets prepopulated if they are sent.
         requestParams.primaryPhoneNumber = @"4088029656";
         requestParams.secondaryPhoneNumber = @"4088029658";
         
