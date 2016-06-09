@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05C6FCB8DAF7BEA1F7DF9026 /* libPods-ProsperBorrowerSDKSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B4CC443B91F068E5D8B0AF /* libPods-ProsperBorrowerSDKSample.a */; };
 		4F01DDE31BD806FF00A4F998 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F01DDE21BD806FF00A4F998 /* WelcomeViewController.m */; };
 		4F01DDF31BD88D6C00A4F998 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F01DDF21BD88D6C00A4F998 /* LaunchScreen.xib */; };
 		4F7AABCC1BC4AE5E0025631B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AABCB1BC4AE5E0025631B /* main.m */; };
@@ -19,7 +20,6 @@
 		4F7AAC091BC4E28D0025631B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7AAC081BC4E28D0025631B /* libsqlite3.0.tbd */; };
 		4FEFC8C11BF1ACD700E2E537 /* ProsperBorrowerSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4FEFC8BF1BF1ACD700E2E537 /* ProsperBorrowerSDK.bundle */; };
 		4FEFC8C21BF1ACD700E2E537 /* ProsperBorrowerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEFC8C01BF1ACD700E2E537 /* ProsperBorrowerSDK.framework */; };
-		9C445BDDBA635816C317592E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DED31CA7489A6609AC1CF50 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +61,10 @@
 		4F7AAC081BC4E28D0025631B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4FEFC8BF1BF1ACD700E2E537 /* ProsperBorrowerSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ProsperBorrowerSDK.bundle; path = ../Frameworks/ProsperBorrowerSDK.bundle; sourceTree = "<group>"; };
 		4FEFC8C01BF1ACD700E2E537 /* ProsperBorrowerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ProsperBorrowerSDK.framework; path = ../Frameworks/ProsperBorrowerSDK.framework; sourceTree = "<group>"; };
+		5935C4789428DB5F8140FE38 /* Pods-ProsperBorrowerSDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProsperBorrowerSDKSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample.debug.xcconfig"; sourceTree = "<group>"; };
 		5DED31CA7489A6609AC1CF50 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		75D8BD45E5A005F931272E34 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		A222E14F09C157B68F84F052 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CDB9A076191357B329E86438 /* Pods-ProsperBorrowerSDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProsperBorrowerSDKSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample.release.xcconfig"; sourceTree = "<group>"; };
+		E3B4CC443B91F068E5D8B0AF /* libPods-ProsperBorrowerSDKSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProsperBorrowerSDKSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +74,7 @@
 			files = (
 				4F7AAC091BC4E28D0025631B /* libsqlite3.0.tbd in Frameworks */,
 				4FEFC8C21BF1ACD700E2E537 /* ProsperBorrowerSDK.framework in Frameworks */,
-				9C445BDDBA635816C317592E /* libPods.a in Frameworks */,
+				05C6FCB8DAF7BEA1F7DF9026 /* libPods-ProsperBorrowerSDKSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,11 +95,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2AD111E37325BC7926ACCAED /* Pods */ = {
+		4C99C43FDA5B2191878A3BA8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A222E14F09C157B68F84F052 /* Pods.debug.xcconfig */,
-				75D8BD45E5A005F931272E34 /* Pods.release.xcconfig */,
+				5935C4789428DB5F8140FE38 /* Pods-ProsperBorrowerSDKSample.debug.xcconfig */,
+				CDB9A076191357B329E86438 /* Pods-ProsperBorrowerSDKSample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -112,8 +113,8 @@
 				4F7AABE31BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests */,
 				4F7AABEE1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests */,
 				4F7AABC81BC4AE5E0025631B /* Products */,
-				2AD111E37325BC7926ACCAED /* Pods */,
 				7418253C48060816608FB905 /* Frameworks */,
+				4C99C43FDA5B2191878A3BA8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +177,7 @@
 			children = (
 				4F7AAC081BC4E28D0025631B /* libsqlite3.0.tbd */,
 				5DED31CA7489A6609AC1CF50 /* libPods.a */,
+				E3B4CC443B91F068E5D8B0AF /* libPods-ProsperBorrowerSDKSample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,12 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F7AABF41BC4AE5E0025631B /* Build configuration list for PBXNativeTarget "ProsperBorrowerSDKSample" */;
 			buildPhases = (
-				42AEC0E4B599CB65EEEBC3A4 /* Check Pods Manifest.lock */,
+				4256AB41341B1D6B490B2FEE /* 📦 Check Pods Manifest.lock */,
 				4F7AABC31BC4AE5E0025631B /* Sources */,
 				4F7AABC41BC4AE5E0025631B /* Frameworks */,
 				4F7AABC51BC4AE5E0025631B /* Resources */,
-				9C6D2601916D9CA44B9F1C83 /* Copy Pods Resources */,
-				F7CBFE2C2E82BD80C54B64B8 /* Embed Pods Frameworks */,
+				BCBAD30C637D6E05CA207F17 /* 📦 Embed Pods Frameworks */,
+				E38C91F155A837816EE94E9A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,14 +312,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42AEC0E4B599CB65EEEBC3A4 /* Check Pods Manifest.lock */ = {
+		4256AB41341B1D6B490B2FEE /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,34 +327,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9C6D2601916D9CA44B9F1C83 /* Copy Pods Resources */ = {
+		BCBAD30C637D6E05CA207F17 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F7CBFE2C2E82BD80C54B64B8 /* Embed Pods Frameworks */ = {
+		E38C91F155A837816EE94E9A /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -496,7 +498,7 @@
 		};
 		4F7AABF51BC4AE5E0025631B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A222E14F09C157B68F84F052 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 5935C4789428DB5F8140FE38 /* Pods-ProsperBorrowerSDKSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Prosper Marketplace, Inc.";
@@ -517,7 +519,7 @@
 		};
 		4F7AABF61BC4AE5E0025631B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75D8BD45E5A005F931272E34 /* Pods.release.xcconfig */;
+			baseConfigurationReference = CDB9A076191357B329E86438 /* Pods-ProsperBorrowerSDKSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Prosper Marketplace, Inc.";

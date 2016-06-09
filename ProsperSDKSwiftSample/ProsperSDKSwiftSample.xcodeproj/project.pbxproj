@@ -18,7 +18,7 @@
 		4FD5FC0E1BFA99BA001EBB88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5FC0C1BFA99BA001EBB88 /* LaunchScreen.storyboard */; };
 		4FD5FC191BFA99BA001EBB88 /* ProsperSDKSwiftSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5FC181BFA99BA001EBB88 /* ProsperSDKSwiftSampleTests.swift */; };
 		4FD5FC241BFA99BA001EBB88 /* ProsperSDKSwiftSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5FC231BFA99BA001EBB88 /* ProsperSDKSwiftSampleUITests.swift */; };
-		544634DD744B2B0A73C09026 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FDA2D4C8C6B76945D9B1A3 /* libPods.a */; };
+		AEFA97A89870E63C75E5FDAD /* libPods-ProsperSDKSwiftSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02033313EB326699EA3F62D0 /* libPods-ProsperSDKSwiftSample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02033313EB326699EA3F62D0 /* libPods-ProsperSDKSwiftSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProsperSDKSwiftSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F20E4DA1BFAA089007673C6 /* ProsperSDKSwiftSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProsperSDKSwiftSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		4F20E4DE1BFAA0C1007673C6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4F20E4E01BFAA0DA007673C6 /* OfferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
@@ -57,9 +58,9 @@
 		4FD5FC1F1BFA99BA001EBB88 /* ProsperSDKSwiftSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProsperSDKSwiftSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD5FC231BFA99BA001EBB88 /* ProsperSDKSwiftSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProsperSDKSwiftSampleUITests.swift; sourceTree = "<group>"; };
 		4FD5FC251BFA99BA001EBB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		972FC4BDA1D63715354713F1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C38124E2484AEBCF5467F3C0 /* Pods-ProsperSDKSwiftSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProsperSDKSwiftSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProsperSDKSwiftSample/Pods-ProsperSDKSwiftSample.debug.xcconfig"; sourceTree = "<group>"; };
+		CC6099BD055D67186AC2A116 /* Pods-ProsperSDKSwiftSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProsperSDKSwiftSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProsperSDKSwiftSample/Pods-ProsperSDKSwiftSample.release.xcconfig"; sourceTree = "<group>"; };
 		D0FDA2D4C8C6B76945D9B1A3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E61FFAD607A90A4C282A4720 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +70,7 @@
 			files = (
 				4F33A7F01BFBF29F0021B1C8 /* ProsperBorrowerSDK.framework in Frameworks */,
 				4F33A7E41BFAFAFE0021B1C8 /* libsqlite3.0.tbd in Frameworks */,
-				544634DD744B2B0A73C09026 /* libPods.a in Frameworks */,
+				AEFA97A89870E63C75E5FDAD /* libPods-ProsperSDKSwiftSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +99,8 @@
 				4FD5FC171BFA99BA001EBB88 /* ProsperSDKSwiftSampleTests */,
 				4FD5FC221BFA99BA001EBB88 /* ProsperSDKSwiftSampleUITests */,
 				4FD5FC011BFA99BA001EBB88 /* Products */,
-				CC847E5921FC17BBADE5307B /* Pods */,
 				C788490A9BC62BE0DA7B8C5E /* Frameworks */,
+				925F51E818F02A356CEA5175 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,23 +147,24 @@
 			path = ProsperSDKSwiftSampleUITests;
 			sourceTree = "<group>";
 		};
+		925F51E818F02A356CEA5175 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C38124E2484AEBCF5467F3C0 /* Pods-ProsperSDKSwiftSample.debug.xcconfig */,
+				CC6099BD055D67186AC2A116 /* Pods-ProsperSDKSwiftSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C788490A9BC62BE0DA7B8C5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				4F33A7EE1BFBF29F0021B1C8 /* ProsperBorrowerSDK.framework */,
 				4F33A7E31BFAFAFE0021B1C8 /* libsqlite3.0.tbd */,
 				D0FDA2D4C8C6B76945D9B1A3 /* libPods.a */,
+				02033313EB326699EA3F62D0 /* libPods-ProsperSDKSwiftSample.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CC847E5921FC17BBADE5307B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				972FC4BDA1D63715354713F1 /* Pods.debug.xcconfig */,
-				E61FFAD607A90A4C282A4720 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,12 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FD5FC281BFA99BA001EBB88 /* Build configuration list for PBXNativeTarget "ProsperSDKSwiftSample" */;
 			buildPhases = (
-				EF0D95CA15ABCE51C4514845 /* Check Pods Manifest.lock */,
+				48F731AD16E7A0AA9C95B50A /* 📦 Check Pods Manifest.lock */,
 				4FD5FBFC1BFA99BA001EBB88 /* Sources */,
 				4FD5FBFD1BFA99BA001EBB88 /* Frameworks */,
 				4FD5FBFE1BFA99BA001EBB88 /* Resources */,
-				BF57520C1688A464085A67AE /* Embed Pods Frameworks */,
-				BC7EE77F5F59E52929AADE08 /* Copy Pods Resources */,
+				1C56445B3FB8C985EAF95162 /* 📦 Embed Pods Frameworks */,
+				7F25A6EBC4575BD0283F8A26 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,49 +298,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BC7EE77F5F59E52929AADE08 /* Copy Pods Resources */ = {
+		1C56445B3FB8C985EAF95162 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProsperSDKSwiftSample/Pods-ProsperSDKSwiftSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BF57520C1688A464085A67AE /* Embed Pods Frameworks */ = {
+		48F731AD16E7A0AA9C95B50A /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF0D95CA15ABCE51C4514845 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7F25A6EBC4575BD0283F8A26 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProsperSDKSwiftSample/Pods-ProsperSDKSwiftSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -490,7 +492,7 @@
 		};
 		4FD5FC291BFA99BA001EBB88 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 972FC4BDA1D63715354713F1 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = C38124E2484AEBCF5467F3C0 /* Pods-ProsperSDKSwiftSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -513,7 +515,7 @@
 		};
 		4FD5FC2A1BFA99BA001EBB88 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E61FFAD607A90A4C282A4720 /* Pods.release.xcconfig */;
+			baseConfigurationReference = CC6099BD055D67186AC2A116 /* Pods-ProsperSDKSwiftSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
