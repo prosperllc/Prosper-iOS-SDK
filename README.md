@@ -6,7 +6,7 @@ The Prosper Borrower SDK is a native SDK that allows your customers to apply for
 With the Prosper Borrower SDK, you can refer your users to receive loan offers through Prosper. After receiving the loan offers, the customer can select that offer, create a Prosper account, and complete a loan application immediately. After the loan application has been completed, Prosper initiates loan verification and generates a loan listing for funding by Prosper investors. 
 
 ## Prosper Borrower SDK requirements
-The Prosper Borrower SDK supports iOS 7 or higher versions.
+The Prosper Borrower SDK supports iOS 8 or higher versions.
 You must use Xcode 7 or higher to build your project with the SDK. 
 
 The SDK also uses the following frameworks/libraries:
@@ -106,7 +106,7 @@ Copy and paste the following lines into the Podfile. This references the Prosper
 
 ```
 source 'https://github.com/CocoaPods/Specs.git' 
-platform :ios, '7.0'
+platform :ios, '8.0'
 
 pod 'ProsperBorrowerSDK'
 ```
