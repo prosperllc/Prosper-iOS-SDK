@@ -108,4 +108,7 @@
  */
 @property (readonly, nonatomic, strong) NSDate *offerDate;
 
+
+- (NSDictionary *)getOfferDetails;
+
 @end

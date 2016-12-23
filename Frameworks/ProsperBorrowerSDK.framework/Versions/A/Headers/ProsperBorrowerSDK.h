@@ -10,7 +10,6 @@
 #import <ProsperBorrowerSDK/PMIBorrowerInfo.h>
 #import <ProsperBorrowerSDK/PMIBorrowerConstants.h>
 #import <ProsperBorrowerSDK/PMIProsperConfig.h>
-#import <ProsperBorrowerSDK/PMILoginAPIService.h>
 
 
 

@@ -18,14 +18,14 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 247/255, green: 147/255, blue:42/255, alpha: 1.0)
-        self.navigationController?.navigationBar.translucent = true
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         //self.navigationController?.navigationBar.hidden = true
         
         
-        let paragrapStyle = NSMutableParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
-        paragrapStyle.alignment = NSTextAlignment.Left
+        let paragrapStyle = NSMutableParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
+        paragrapStyle.alignment = NSTextAlignment.left
         paragrapStyle.lineSpacing = 4
         paragrapStyle.minimumLineHeight = 18
         
@@ -37,8 +37,7 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
         self.descriptionTextLabel.attributedText = descriptionAttrText
         
         
-        let newUserText = "Option 2 : If you do not want to collect user data to generate offers, allow the SDK to collect user data"
-        " and display peronalized offers."
+        let newUserText = "Option 2 : If you do not want to collect user data to generate offers, allow the SDK to collect user data and display peronalized offers."
         let userTextLabelText = NSAttributedString(string: newUserText, attributes: attributes) //1
         self.userTextLabel.attributedText = userTextLabelText
         
@@ -50,9 +49,9 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
         // Do any additional setup after loading the view.
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.hidden = false
+        self.navigationController?.navigationBar.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,19 +59,25 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func getOffersButtonClicked(sender: AnyObject) {
-        let alert:UIAlertView = UIAlertView(title: "Alert",
-            message: "Your personal information is shared for applying a Prosper Loan. Do you want to continue?",
-            delegate: self,
-            cancelButtonTitle: "Cancel")
-        alert.addButtonWithTitle("Ok")
-        alert.show()
+    @IBAction func getOffersButtonClicked(_ sender: AnyObject) {
+        let alert = UIAlertController(title: "Error",
+                                      message: "Your personal information is shared for applying a Prosper Loan. Do you want to continue?",
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        
+        // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
+            print("OK")
+            self.okClicked()
+        }
+        
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
-        let buttonTitle = alertView.buttonTitleAtIndex(buttonIndex)
-        if buttonTitle == "Ok" {
-            // Below are the 13 fields that needs to be passed as part of borrower information.
+    func okClicked(){
+                  // Below are the 13 fields that needs to be passed as part of borrower information.
             let borrowerInfo:PMIBorrowerInfo = PMIBorrowerInfo.init()
             
             // 1
@@ -113,7 +118,7 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             
             // 13
             let randomNumber = arc4random_uniform(10000)
-            borrowerInfo.email = String(format:"TestUser20151019%d@gmail.com", randomNumber)
+            borrowerInfo.email = String(format:"TestUser201534567%d@gmail.com", randomNumber)
             
             // Optional fields
             
@@ -134,42 +139,39 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             borrowerInfo.bankRoutingNumber = "121000248"
             
             
-            self.loadingView.hidden = false
+            self.loadingView.isHidden = false
             
-            PMIProspectOffersAPIService.getLoanOffers(borrowerInfo, withCompletionBlock: { (offersResponse:PMIProspectOffersResponse!) -> Void in
-                self.loadingView.hidden = true
+            PMIProspectOffersAPIService.getLoanOffers(borrowerInfo, withCompletionBlock: { (offersResponse) in
+                self.loadingView.isHidden = true
                 
-                if let offerList:PMILoanOfferList = offersResponse.loanOfferList {
-                     if let offers = offerList.offers {
+                if let offerList:PMILoanOfferList = offersResponse?.loanOfferList {
+                    if let offers = offerList.offers {
                         let offer:PMILoanOffer = offers[0] as! PMILoanOffer
                         
-                        let viewController:OfferViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OfferViewController") as! OfferViewController
+                        let viewController:OfferViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OfferViewController") as! OfferViewController
                         viewController.loanOffer = offer
                         
                         self.navigationController?.pushViewController(viewController, animated: true)
-
+                        
                     }
                 } else {
-                    let alert:UIAlertView = UIAlertView(title: "Error",
-                        message:offersResponse.responseError.getErrorDescription(),
-                        delegate: nil,
-                        cancelButtonTitle: "Ok")
-                    alert.show()
+                    
+                    let alert = UIAlertController(title: "Error", message: offersResponse!.responseError.getDescription(), preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    
                 }
-
             })
-        
-        }
     }
     
 
-    @IBAction func prosperFunnelButtonClicked(sender: AnyObject) {
+    @IBAction func prosperFunnelButtonClicked(_ sender: AnyObject) {
         let borrowerViewController =  PMIBorrowerViewController.init(details: nil, delegate: self)
-        self.presentViewController(borrowerViewController, animated: true, completion: nil)
+        self.present(borrowerViewController!, animated: true, completion: nil)
     
     }
     
-    func borrowerViewController(borrowerViewController:PMIBorrowerViewController, loanProcessedStatus loanStatus:BorrowerLoanStatus) {
+    func borrowerViewController(_ borrowerViewController:PMIBorrowerViewController, loanProcessedStatus loanStatus:BorrowerLoanStatus) {
         var status:String = ""
         if loanStatus == PMIBorrowerLoanSuccess {
             status = "Loan is successfully processed."
@@ -179,12 +181,12 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             status = "Loan Process got timed out due to inactive user session."
         }
         
-        let alert:UIAlertView = UIAlertView(title: "Alert",
-            message: status,
-            delegate: nil,
-            cancelButtonTitle: "Cancel")
-        alert.show()
+        let alert = UIAlertController(title: "Alert",
+                                      message: status,
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         
+        self.present(alert, animated: true, completion: nil)
     }
 
     /*

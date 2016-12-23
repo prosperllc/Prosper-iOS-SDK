@@ -18,4 +18,7 @@
  */
 - (NSString*)getServerErrorCode;
 
+
+- (NSString*)getHTTPErrorDescription;
+
 @end

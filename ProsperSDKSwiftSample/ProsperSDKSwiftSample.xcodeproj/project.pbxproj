@@ -46,6 +46,8 @@
 		4F33A7E31BFAFAFE0021B1C8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4F33A7EE1BFBF29F0021B1C8 /* ProsperBorrowerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ProsperBorrowerSDK.framework; path = ../Frameworks/ProsperBorrowerSDK.framework; sourceTree = "<group>"; };
 		4F33A7F11BFBF2F00021B1C8 /* ProsperBorrowerSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ProsperBorrowerSDK.bundle; path = ../Frameworks/ProsperBorrowerSDK.bundle; sourceTree = "<group>"; };
+		4F8424931E0CD2D6007DA05B /* ProsperBorrowerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ProsperBorrowerSDK.framework; path = ../Frameworks/ProsperBorrowerSDK.framework; sourceTree = "<group>"; };
+		4F8424961E0CD6FA007DA05B /* ProsperSDKSwiftSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProsperSDKSwiftSample.entitlements; sourceTree = "<group>"; };
 		4FD5FC001BFA99BA001EBB88 /* ProsperSDKSwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProsperSDKSwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD5FC031BFA99BA001EBB88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD5FC081BFA99BA001EBB88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		4FD5FBF71BFA99BA001EBB88 = {
 			isa = PBXGroup;
 			children = (
+				4F8424931E0CD2D6007DA05B /* ProsperBorrowerSDK.framework */,
 				4F33A7F11BFBF2F00021B1C8 /* ProsperBorrowerSDK.bundle */,
 				4FD5FC021BFA99BA001EBB88 /* ProsperSDKSwiftSample */,
 				4FD5FC171BFA99BA001EBB88 /* ProsperSDKSwiftSampleTests */,
@@ -117,6 +120,7 @@
 		4FD5FC021BFA99BA001EBB88 /* ProsperSDKSwiftSample */ = {
 			isa = PBXGroup;
 			children = (
+				4F8424961E0CD6FA007DA05B /* ProsperSDKSwiftSample.entitlements */,
 				4FD5FC031BFA99BA001EBB88 /* AppDelegate.swift */,
 				4F20E4DE1BFAA0C1007673C6 /* WelcomeViewController.swift */,
 				4F20E4E01BFAA0DA007673C6 /* OfferViewController.swift */,
@@ -174,12 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FD5FC281BFA99BA001EBB88 /* Build configuration list for PBXNativeTarget "ProsperSDKSwiftSample" */;
 			buildPhases = (
-				48F731AD16E7A0AA9C95B50A /* 📦 Check Pods Manifest.lock */,
+				48F731AD16E7A0AA9C95B50A /* [CP] Check Pods Manifest.lock */,
 				4FD5FBFC1BFA99BA001EBB88 /* Sources */,
 				4FD5FBFD1BFA99BA001EBB88 /* Frameworks */,
 				4FD5FBFE1BFA99BA001EBB88 /* Resources */,
-				1C56445B3FB8C985EAF95162 /* 📦 Embed Pods Frameworks */,
-				7F25A6EBC4575BD0283F8A26 /* 📦 Copy Pods Resources */,
+				1C56445B3FB8C985EAF95162 /* [CP] Embed Pods Frameworks */,
+				7F25A6EBC4575BD0283F8A26 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,18 +237,27 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Prosper Marketplace Inc.";
 				TargetAttributes = {
 					4FD5FBFF1BFA99BA001EBB88 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 5TRF226HUZ;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					4FD5FC131BFA99BA001EBB88 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4FD5FBFF1BFA99BA001EBB88;
 					};
 					4FD5FC1E1BFA99BA001EBB88 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4FD5FBFF1BFA99BA001EBB88;
 					};
 				};
@@ -298,14 +311,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C56445B3FB8C985EAF95162 /* 📦 Embed Pods Frameworks */ = {
+		1C56445B3FB8C985EAF95162 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,14 +326,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProsperSDKSwiftSample/Pods-ProsperSDKSwiftSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		48F731AD16E7A0AA9C95B50A /* 📦 Check Pods Manifest.lock */ = {
+		48F731AD16E7A0AA9C95B50A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,14 +341,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7F25A6EBC4575BD0283F8A26 /* 📦 Copy Pods Resources */ = {
+		7F25A6EBC4575BD0283F8A26 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,8 +433,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -443,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -465,8 +480,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -482,9 +499,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -496,19 +514,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ProsperSDKSwiftSample/ProsperSDKSwiftSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5TRF226HUZ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ProsperSDKSwiftSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prosper.ProsperSDKSwiftSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ProsperSDKSwiftSample/ProsperSDKSwiftSample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -519,18 +540,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ProsperSDKSwiftSample/ProsperSDKSwiftSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5TRF226HUZ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ProsperSDKSwiftSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prosper.ProsperSDKSwiftSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ProsperSDKSwiftSample/ProsperSDKSwiftSample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -543,6 +567,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prosper.ProsperSDKSwiftSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProsperSDKSwiftSample.app/ProsperSDKSwiftSample";
 			};
 			name = Debug;
@@ -555,6 +580,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prosper.ProsperSDKSwiftSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProsperSDKSwiftSample.app/ProsperSDKSwiftSample";
 			};
 			name = Release;
@@ -566,6 +592,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prosper.ProsperSDKSwiftSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ProsperSDKSwiftSample;
 				USES_XCTRUNNER = YES;
 			};
@@ -578,6 +605,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prosper.ProsperSDKSwiftSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ProsperSDKSwiftSample;
 				USES_XCTRUNNER = YES;
 			};

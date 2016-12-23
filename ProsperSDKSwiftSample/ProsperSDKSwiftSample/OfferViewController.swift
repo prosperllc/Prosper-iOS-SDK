@@ -16,17 +16,17 @@ class OfferViewController: UIViewController, PMIBorrowerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: "handleTap:")
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(OfferViewController.handleTap(_:)))
         self.view.addGestureRecognizer(tapGesture)
-        self.navigationController?.navigationBar.hidden = true
+        self.navigationController?.navigationBar.isHidden = true
 
         // Do any additional setup after loading the view.
     }
     
-    func handleTap(gestureRecognizer: UIGestureRecognizer) {
+    func handleTap(_ gestureRecognizer: UIGestureRecognizer) {
         // handling code
         let borrowerViewController =  PMIBorrowerViewController.init(offer: loanOffer, delegate: self)
-        self.presentViewController(borrowerViewController, animated: true, completion: nil)
+        self.present(borrowerViewController!, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +34,7 @@ class OfferViewController: UIViewController, PMIBorrowerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func borrowerViewController(borrowerViewController:PMIBorrowerViewController, loanProcessedStatus loanStatus:BorrowerLoanStatus) {
+    func borrowerViewController(_ borrowerViewController:PMIBorrowerViewController, loanProcessedStatus loanStatus:BorrowerLoanStatus) {
         var status:String = ""
         if loanStatus == PMIBorrowerLoanSuccess {
             status = "Loan is successfully processed."
@@ -44,13 +44,15 @@ class OfferViewController: UIViewController, PMIBorrowerDelegate {
             status = "Loan Process got timed out due to inactive user session."
         }
         
-        let alert:UIAlertView = UIAlertView(title: "Alert",
-            message: status,
-            delegate: nil,
-            cancelButtonTitle: "Cancel")
-        alert.show()
+        let alert = UIAlertController(title: "Alert",
+                                      message: status,
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        _=navigationController?.popToRootViewController(animated: true)
     }
 
     /*

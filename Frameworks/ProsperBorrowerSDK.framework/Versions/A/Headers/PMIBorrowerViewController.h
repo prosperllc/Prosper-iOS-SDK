@@ -8,6 +8,7 @@
 @class PMILoanOffer;
 @class PMIBorrowerInfo;
 @class PMIBorrowerViewController;
+@class AFOAuthCredential;
 
 /*
  BorrowerDelegate Protocol has to be implemented by the delegate class to know the status of loan.

@@ -23,23 +23,4 @@
                     refAC:(NSString*)refAC
           prodCredentials:(BOOL)flag;
 
-
-/**
- * Initializes the Prosper configuration
- 
- @param clientId pass the clientID that is communicated
- @param clientSecret pass the clientSecret that is communicated
- @param refMC pass the refMC that is communicated
- @param refAC pass the refAC that is communicated
- @param environmentName pass @"QA"  or @"Stage" or  @"Sandbox" or @"Sandbox" or @"Production"
- pass NO if the clientId, ClientSecret are for sandbox environment
- **/
-
-+ (void) initWithClientId:(NSString*)clientId
-             clientSecret:(NSString*)clientSecret
-                    refMC:(NSString*)refMC
-                    refAC:(NSString*)refAC
-          environmentName:(NSString*)name;
-
-
 @end
