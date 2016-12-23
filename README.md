@@ -473,20 +473,17 @@ In this step, you will pass the PMIBorrowerInfo (borrowerInfo) object you constr
 
 ```
 PMIProspectOffersAPIService.getLoanOffers(borrowerInfo, withCompletionBlock: { 
-(offersResponse:PMIProspectOffersResponse!) -> Void in
+(offersResponse) in
          self.loadingView.hidden = true
           
          if let offerList:PMILoanOfferList = offersResponse.loanOfferList {
         } 
     else {
-         let alert:UIAlertView = UIAlertView(title: "Error",
-            message:offersResponse.responseError.getErrorDescription(),
-            delegate: nil,
-            cancelButtonTitle: "Ok")
-        alert.show()
+           let alert = UIAlertController(title: "Error", message: offersResponse!.responseError.getDescription(), preferredStyle:   UIAlertControllerStyle.alert)
+          alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+         self.present(alert, animated: true, completion: nil)
      }
-
-  })
+   })
 ```
 
 The code above returns an Offers list object. The list contains different loan offers for which the user has been pre-approved. These offers range between different interest rates, APRs and length of term. It is up to your development team to determine the offers to display to the user. If the call is unsuccessful, you will receive an error from the PMILoanOffersAPIService.
@@ -569,11 +566,12 @@ func borrowerViewController(borrowerViewController:PMIBorrowerViewController, lo
          status = "Loan process timed out due to an inactive user session."
     }
     
-     let alert:UIAlertView = UIAlertView(title: "Alert",
-        message: status,
-        delegate: nil,
-        cancelButtonTitle: "Cancel")
-      alert.show()
+     let alert = UIAlertController(title: "Alert",
+                                      message: status,
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
       
       self.navigationController?.popToRootViewControllerAnimated(true)
 }
