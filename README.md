@@ -106,7 +106,7 @@ Copy and paste the following lines into the Podfile. This references the Prosper
 
 ```
 source 'https://github.com/CocoaPods/Specs.git' 
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 pod 'ProsperBorrowerSDK'
 ```
