@@ -3,7 +3,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = 'ProsperBorrowerSDK'
-  spec.version      = '1.0.10'
+  spec.version      = '1.10'
 spec.license = { :type => 'Copyright',
                 :text => <<-LICENSE
                 Copyright © 2015 Prosper Funding, LLC, All rights reserved.
@@ -21,10 +21,7 @@ spec.license = { :type => 'Copyright',
   spec.dependency 'AdobeMobileSDK', '4.13.5'
   spec.vendored_frameworks = 'Frameworks/ProsperBorrowerSDK.framework'
   spec.resources = 'Frameworks/ProsperBorrowerSDK.bundle'
-  spec.preserve_path = 'ProsperBorrowerSDKSample'
   spec.frameworks = 'SystemConfiguration'
   spec.library = 'sqlite3.0'
   spec.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
-
 end
-

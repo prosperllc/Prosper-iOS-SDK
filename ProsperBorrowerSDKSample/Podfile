@@ -11,8 +11,8 @@ pod "AFNetworking", "~> 3.1.0"
 # https://github.com/AFNetworking/AFOAuth2Manager
 pod "AFOAuth2Manager", "~> 3.0.0"
 
-pod 'GoogleMaps', '~> 1.10.5'
-
+pod 'GoogleMaps', '~> 2.2'
+pod 'GooglePlaces', '~> 2.2'
 pod 'AdobeMobileSDK', '~> 4.13.2'
 
 target :ProsperBorrowerSDKSample do
