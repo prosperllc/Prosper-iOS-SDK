@@ -39,14 +39,20 @@
         loanStatus = @"Loan Process got cancelled";
     } else if(status == PMIBorrowerTimedOut) {
         loanStatus = @"Loan Process got timed out due to inactive user session";
+        
     }
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert"
-                                                    message:loanStatus
-                                                   delegate:nil
-                                          cancelButtonTitle:@"Ok"
-                                          otherButtonTitles:nil];
-    [alert show];
+    UIAlertController * alertController =   [UIAlertController
+                                             alertControllerWithTitle:@"Alert"
+                                             message:loanStatus
+                                             preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAlertAction = [UIAlertAction actionWithTitle:@"Ok"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:nil];
+    [alertController addAction:cancelAlertAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
     
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

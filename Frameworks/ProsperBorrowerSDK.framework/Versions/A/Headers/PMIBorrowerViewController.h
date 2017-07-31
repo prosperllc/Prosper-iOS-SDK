@@ -43,6 +43,10 @@
                                    delegate:(id<PMIBorrowerDelegate>) delegate;
 
 
+- (PMIBorrowerViewController*)initWithReferralCode:(NSString*)referralCode
+                                         offerCode:(NSString*)code
+                                   delegate:(id<PMIBorrowerDelegate>) delegate;
+
 @end
 
 

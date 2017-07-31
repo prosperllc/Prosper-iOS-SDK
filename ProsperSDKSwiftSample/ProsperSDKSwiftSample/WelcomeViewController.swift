@@ -90,25 +90,25 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             borrowerInfo.creditRangeId = PMIExcellentCredit.rawValue
             
             // 4
-            borrowerInfo.firstName = "Mary"
+            borrowerInfo.firstName = "TAHIR"
             
             // 5
-            borrowerInfo.lastName = "Hopkins"
+            borrowerInfo.lastName = "BESS"
             
             // 6
-            borrowerInfo.dateOfBirth = "03/22/1984"
+            borrowerInfo.dateOfBirth = "01/01/1932"
             
             // 7
-            borrowerInfo.address1 = "912 PINELAND AVE APT 33"
+            borrowerInfo.address1 = "1639 SW WITHDEAN RD"
             
             // 8
-            borrowerInfo.city = "Hinesville"
+            borrowerInfo.city = "TOPEKA"
             
             // 9
-            borrowerInfo.state = "GA"
+            borrowerInfo.state = "KS"
             
             // 10
-            borrowerInfo.zipCode = "31313"
+            borrowerInfo.zipCode = "66611"
             
             // 11
             borrowerInfo.employmentStatusId = PMIEmployed.rawValue
@@ -118,12 +118,12 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             
             // 13
             let randomNumber = arc4random_uniform(10000)
-            borrowerInfo.email = String(format:"TestUser201534567%d@gmail.com", randomNumber)
+            borrowerInfo.email = String(format:"TestUser20178%d@gmail.com", randomNumber)
             
             // Optional fields
             
-            borrowerInfo.primaryPhoneNumber = "4088029656"
-            borrowerInfo.secondaryPhoneNumber = "4088029658"
+            borrowerInfo.primaryPhoneNumber = "4088029623"
+            borrowerInfo.secondaryPhoneNumber = "4088029625"
             
             borrowerInfo.employerName = "Employer Name"
             borrowerInfo.employerPhoneNumber = "4088029876"

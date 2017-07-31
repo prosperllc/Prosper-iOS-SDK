@@ -62,23 +62,31 @@
     self.navigationController.navigationBar.hidden = NO;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Button Action Methods
 
 - (IBAction)getOffersButtonClicked:(id)sender {
     
+    UIAlertController * alertController =   [UIAlertController
+                                             alertControllerWithTitle:@""
+                                             message:@"Your personal information is shared for applying a Prosper Loan. Do you want to continue?"
+                                             preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
-                                                    message:@"Your personal information is shared for applying a Prosper Loan. Do you want to continue?"
-                                                   delegate:self
-                                          cancelButtonTitle:@"Cancel"
-                                          otherButtonTitles:@"Ok",nil];
-    [alert show];
     
+    UIAlertAction *cancelAlertAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:nil];
+    
+    UIAlertAction *okAlertAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction *action) {
+                                                                  [self showOffers];
+                                                                  
+                                                              }];
+    [alertController addAction:cancelAlertAction];
+    [alertController addAction:okAlertAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (IBAction)prosperFunnelButtonClicked:(id)sender {
@@ -87,112 +95,113 @@
     [self presentViewController:borrowerViewController animated:YES completion:nil];
 }
 
-#pragma mark - UIAlertView delegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+- (void)showOffers
 {
-    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    // Below are the 13 fields that needs to be passed as part of borrower information.
     
-    if([title isEqualToString:@"Ok"]) {
-        // Below are the 13 fields that needs to be passed as part of borrower information.
+    PMIBorrowerInfo *requestParams = [[PMIBorrowerInfo alloc] init];
+    NSNumber *loanAmount = @5000;
+    // 1
+    requestParams.loanAmount = loanAmount;
+    
+    // 2
+    requestParams.loanPurposeId = PMIHomeImprovement;
+    
+    // 3
+    requestParams.creditRangeId = PMIExcellentCredit;
+    
+    // 4
+    requestParams.firstName = @"TAHIR";
+    
+    // 5
+    requestParams.lastName = @"BESS";
+    
+    // 6
+    requestParams.dateOfBirth = @"01/01/1932";
+    
+    // 7
+    requestParams.address1 = @"1639 SW WITHDEAN RD";
+    
+    // 8
+    requestParams.city = @"TOPEKA";
+    
+    // 9
+    requestParams.state = @"KS";
+    
+    // 10
+    requestParams.zipCode = @"66611";
+    
+    // 11
+    requestParams.employmentStatusId = PMIEmployed;
+    
+    // 12
+    NSNumber *num = @100000;
+    requestParams.annualIncome = num;
+    
+    int number = arc4random() %200;
+    // 13
+    requestParams.email = [NSString stringWithFormat:@"TestUser42%d@gmail.com",number];
+    
+    
+    // Below are Optional fields. Below values gets prepopulated if they are sent.
+    requestParams.primaryPhoneNumber = @"4088029656";
+    requestParams.secondaryPhoneNumber = @"4088029658";
+    
+    requestParams.employerName = @"Employer Name";
+    requestParams.employerPhoneNumber = @"4088029876";
+    requestParams.workPhoneNumber = @"4088029878";
+    
+    requestParams.employerStartDate = @"04/2010";
+    requestParams.occupationType = PMIDoctor;
+    
+    //requestParams.ssnNumber = @"12345678";
+    
+    requestParams.bankAccountNumber = @"32423435345435";
+    
+    requestParams.bankRoutingNumber = @"121000248";
+    
+    
+    self.loadingView.hidden = NO;
+    
+    [PMIProspectOffersAPIService getLoanOffers:requestParams withCompletionBlock:^(PMIProspectOffersResponse *servicesRespObj) {
         
-        PMIBorrowerInfo *requestParams = [[PMIBorrowerInfo alloc] init];
-        NSNumber *loanAmount = @5000;
-        // 1
-        requestParams.loanAmount = loanAmount;
-        
-        // 2
-        requestParams.loanPurposeId = PMIHomeImprovement;
-        
-        // 3
-        requestParams.creditRangeId = PMIExcellentCredit;
-        
-        // 4
-        requestParams.firstName = @"Mary";
-        
-        // 5
-        requestParams.lastName = @"Hopkins";
-        
-        // 6
-        requestParams.dateOfBirth = @"03/22/1984";
-        
-        // 7
-        requestParams.address1 = @"912 PINELAND AVE APT 33";
-        
-        // 8
-        requestParams.city = @"Hinesville";
-        
-        // 9
-        requestParams.state = @"GA";
-        
-        // 10
-        requestParams.zipCode = @"31313";
-        
-        // 11
-        requestParams.employmentStatusId = PMIEmployed;
-        
-        // 12
-        NSNumber *num = @100000;
-        requestParams.annualIncome = num;
-        
-        int number = arc4random() %200;
-        // 13
-        requestParams.email = [NSString stringWithFormat:@"TestUser20151019%d@gmail.com",number];
-        
-        
-        // Below are Optional fields. Below values gets prepopulated if they are sent.
-        requestParams.primaryPhoneNumber = @"4088029656";
-        requestParams.secondaryPhoneNumber = @"4088029658";
-        
-        requestParams.employerName = @"Employer Name";
-        requestParams.employerPhoneNumber = @"4088029876";
-        requestParams.workPhoneNumber = @"4088029878";
-        
-        requestParams.employerStartDate = @"04/2010";
-        requestParams.occupationType = PMIDoctor;
-        
-        requestParams.ssnNumber = @"123456786";
-        
-        requestParams.bankAccountNumber = @"32423435345435";
-        
-        requestParams.bankRoutingNumber = @"121000248";
-
-        
-        self.loadingView.hidden = NO;
-        
-        [PMIProspectOffersAPIService getLoanOffers:requestParams withCompletionBlock:^(PMIProspectOffersResponse *servicesRespObj) {
-            
-            self.loadingView.hidden = YES;
-            if(nil != servicesRespObj.loanOfferList.offers) {
-                NSArray *offersList = servicesRespObj.loanOfferList.offers;
-                if([offersList count] > 0) {
-                    NSNumber *val = @5000;
-                    NSArray *offerCategoriesArray1 = [offersList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(loanAmount == %@)", val]];
-                    
-                    PMILoanOffer *offer = [offersList objectAtIndex:0];
-                    if([offerCategoriesArray1 count] > 0) {
-                        offer = [offerCategoriesArray1 objectAtIndex:0];
-                    }
-                    
-                    UIStoryboard *thankyouStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-                    OfferViewController *thankYouViewController = [thankyouStoryBoard instantiateViewControllerWithIdentifier:@"HomeViewController"];
-                    thankYouViewController.loanOffer = offer;
-                    
-                    [self.navigationController pushViewController:thankYouViewController animated:YES];
-                    
-                }
-            } else {
-                NSLog(@"ErrorDescription = %@", [servicesRespObj.responseError getErrorDescription]);
+        self.loadingView.hidden = YES;
+        if(nil != servicesRespObj.loanOfferList.offers) {
+            NSArray *offersList = servicesRespObj.loanOfferList.offers;
+            if([offersList count] > 0) {
+                NSNumber *val = @5000;
+                NSArray *offerCategoriesArray1 = [offersList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(loanAmount == %@)", val]];
                 
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                message:[servicesRespObj.responseError getErrorDescription]
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"Ok"
-                                                      otherButtonTitles:nil];
-                [alert show];
+                PMILoanOffer *offer = [offersList objectAtIndex:0];
+                if([offerCategoriesArray1 count] > 0) {
+                    offer = [offerCategoriesArray1 objectAtIndex:0];
+                }
+                
+                UIStoryboard *thankyouStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                OfferViewController *thankYouViewController = [thankyouStoryBoard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+                thankYouViewController.loanOffer = offer;
+                
+                [self.navigationController pushViewController:thankYouViewController animated:YES];
+                
             }
-        }];
-    }
+        } else {
+            NSLog(@"ErrorDescription = %@", [servicesRespObj.responseError getErrorDescription]);
+            
+            UIAlertController * alertController =   [UIAlertController
+                                                     alertControllerWithTitle:@"Error"
+                                                     message:[servicesRespObj.responseError getErrorDescription]
+                                                     preferredStyle:UIAlertControllerStyleAlert];
+            
+            
+            UIAlertAction *cancelAlertAction = [UIAlertAction actionWithTitle:@"Ok"
+                                                                        style:UIAlertActionStyleDefault
+                                                                      handler:nil];
+            [alertController addAction:cancelAlertAction];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+    }];
+
 }
 
 #pragma mark - PMIBorrowerDelegate methods
@@ -207,13 +216,19 @@
         loanStatus = @"Loan Process got timed out due to inactive user session";
     }
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert"
-                                                    message:loanStatus
-                                                   delegate:nil
-                                          cancelButtonTitle:@"Ok"
-                                          otherButtonTitles:nil];
-    [alert show];
     
+    UIAlertController * alertController =   [UIAlertController
+                                             alertControllerWithTitle:@"Alert"
+                                             message:loanStatus
+                                             preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAlertAction = [UIAlertAction actionWithTitle:@"Ok"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:nil];
+    [alertController addAction:cancelAlertAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

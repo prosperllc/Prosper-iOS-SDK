@@ -1,1347 +1,643 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>05C6FCB8DAF7BEA1F7DF9026</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E3B4CC443B91F068E5D8B0AF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4256AB41341B1D6B490B2FEE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>4C99C43FDA5B2191878A3BA8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5935C4789428DB5F8140FE38</string>
-				<string>CDB9A076191357B329E86438</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F01DDE11BD806FF00A4F998</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>WelcomeViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F01DDE21BD806FF00A4F998</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>WelcomeViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F01DDE31BD806FF00A4F998</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4F01DDE21BD806FF00A4F998</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4F01DDF21BD88D6C00A4F998</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>path</key>
-			<string>LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F01DDF31BD88D6C00A4F998</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4F01DDF21BD88D6C00A4F998</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4F7AABBE1BC4AE5E0025631B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4F7AABC91BC4AE5E0025631B</string>
-				<string>4FEFC8BF1BF1ACD700E2E537</string>
-				<string>4FEFC8C01BF1ACD700E2E537</string>
-				<string>4F7AABE31BC4AE5E0025631B</string>
-				<string>4F7AABEE1BC4AE5E0025631B</string>
-				<string>4F7AABC81BC4AE5E0025631B</string>
-				<string>7418253C48060816608FB905</string>
-				<string>4C99C43FDA5B2191878A3BA8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABBF1BC4AE5E0025631B</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0800</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Prosper Marketplace Inc.</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>4F7AABC61BC4AE5E0025631B</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.0.1</string>
-						<key>SystemCapabilities</key>
-						<dict>
-							<key>com.apple.Keychain</key>
-							<dict>
-								<key>enabled</key>
-								<string>1</string>
-							</dict>
-						</dict>
-					</dict>
-					<key>4F7AABDF1BC4AE5E0025631B</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.0.1</string>
-						<key>TestTargetID</key>
-						<string>4F7AABC61BC4AE5E0025631B</string>
-					</dict>
-					<key>4F7AABEA1BC4AE5E0025631B</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.0.1</string>
-						<key>TestTargetID</key>
-						<string>4F7AABC61BC4AE5E0025631B</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>4F7AABC21BC4AE5E0025631B</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>4F7AABBE1BC4AE5E0025631B</string>
-			<key>productRefGroup</key>
-			<string>4F7AABC81BC4AE5E0025631B</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>4F7AABC61BC4AE5E0025631B</string>
-				<string>4F7AABDF1BC4AE5E0025631B</string>
-				<string>4F7AABEA1BC4AE5E0025631B</string>
-			</array>
-		</dict>
-		<key>4F7AABC21BC4AE5E0025631B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>4F7AABF21BC4AE5E0025631B</string>
-				<string>4F7AABF31BC4AE5E0025631B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>4F7AABC31BC4AE5E0025631B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4F7AABCF1BC4AE5E0025631B</string>
-				<string>4F01DDE31BD806FF00A4F998</string>
-				<string>4F7AABCC1BC4AE5E0025631B</string>
-				<string>4F7AAC071BC4B1210025631B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4F7AABC41BC4AE5E0025631B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4F7AAC091BC4E28D0025631B</string>
-				<string>4FEFC8C21BF1ACD700E2E537</string>
-				<string>05C6FCB8DAF7BEA1F7DF9026</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4F7AABC51BC4AE5E0025631B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4FEFC8C11BF1ACD700E2E537</string>
-				<string>4F7AABD71BC4AE5E0025631B</string>
-				<string>4F01DDF31BD88D6C00A4F998</string>
-				<string>4F7AABD51BC4AE5E0025631B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4F7AABC61BC4AE5E0025631B</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>4F7AABF41BC4AE5E0025631B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>4256AB41341B1D6B490B2FEE</string>
-				<string>4F7AABC31BC4AE5E0025631B</string>
-				<string>4F7AABC41BC4AE5E0025631B</string>
-				<string>4F7AABC51BC4AE5E0025631B</string>
-				<string>BCBAD30C637D6E05CA207F17</string>
-				<string>E38C91F155A837816EE94E9A</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ProsperBorrowerSDKSample</string>
-			<key>productName</key>
-			<string>ProsperBorrowerSDKSample</string>
-			<key>productReference</key>
-			<string>4F7AABC71BC4AE5E0025631B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>4F7AABC71BC4AE5E0025631B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ProsperBorrowerSDKSample.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4F7AABC81BC4AE5E0025631B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4F7AABC71BC4AE5E0025631B</string>
-				<string>4F7AABE01BC4AE5E0025631B</string>
-				<string>4F7AABEB1BC4AE5E0025631B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABC91BC4AE5E0025631B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4F8424951E0CD694007DA05B</string>
-				<string>4F7AABCD1BC4AE5E0025631B</string>
-				<string>4F7AABCE1BC4AE5E0025631B</string>
-				<string>4F01DDE11BD806FF00A4F998</string>
-				<string>4F01DDE21BD806FF00A4F998</string>
-				<string>4F7AAC051BC4B1210025631B</string>
-				<string>4F7AAC061BC4B1210025631B</string>
-				<string>4F7AABD31BC4AE5E0025631B</string>
-				<string>4F7AABD61BC4AE5E0025631B</string>
-				<string>4F01DDF21BD88D6C00A4F998</string>
-				<string>4F7AABDB1BC4AE5E0025631B</string>
-				<string>4F7AABCA1BC4AE5E0025631B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ProsperBorrowerSDKSample</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABCA1BC4AE5E0025631B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4F7AABCB1BC4AE5E0025631B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABCB1BC4AE5E0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABCC1BC4AE5E0025631B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4F7AABCB1BC4AE5E0025631B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4F7AABCD1BC4AE5E0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABCE1BC4AE5E0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABCF1BC4AE5E0025631B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4F7AABCE1BC4AE5E0025631B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4F7AABD31BC4AE5E0025631B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4F7AABD41BC4AE5E0025631B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABD41BC4AE5E0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABD51BC4AE5E0025631B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4F7AABD31BC4AE5E0025631B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4F7AABD61BC4AE5E0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABD71BC4AE5E0025631B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4F7AABD61BC4AE5E0025631B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4F7AABDB1BC4AE5E0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABDC1BC4AE5E0025631B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4F7AABE51BC4AE5E0025631B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4F7AABDD1BC4AE5E0025631B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4F7AABDE1BC4AE5E0025631B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4F7AABDF1BC4AE5E0025631B</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>4F7AABF71BC4AE5E0025631B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>4F7AABDC1BC4AE5E0025631B</string>
-				<string>4F7AABDD1BC4AE5E0025631B</string>
-				<string>4F7AABDE1BC4AE5E0025631B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>4F7AABE21BC4AE5E0025631B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ProsperBorrowerSDKSampleTests</string>
-			<key>productName</key>
-			<string>ProsperBorrowerSDKSampleTests</string>
-			<key>productReference</key>
-			<string>4F7AABE01BC4AE5E0025631B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>4F7AABE01BC4AE5E0025631B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ProsperBorrowerSDKSampleTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4F7AABE11BC4AE5E0025631B</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>4F7AABBF1BC4AE5E0025631B</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>4F7AABC61BC4AE5E0025631B</string>
-			<key>remoteInfo</key>
-			<string>ProsperBorrowerSDKSample</string>
-		</dict>
-		<key>4F7AABE21BC4AE5E0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>4F7AABC61BC4AE5E0025631B</string>
-			<key>targetProxy</key>
-			<string>4F7AABE11BC4AE5E0025631B</string>
-		</dict>
-		<key>4F7AABE31BC4AE5E0025631B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4F7AABE41BC4AE5E0025631B</string>
-				<string>4F7AABE61BC4AE5E0025631B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ProsperBorrowerSDKSampleTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABE41BC4AE5E0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ProsperBorrowerSDKSampleTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABE51BC4AE5E0025631B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4F7AABE41BC4AE5E0025631B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4F7AABE61BC4AE5E0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABE71BC4AE5E0025631B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4F7AABF01BC4AE5E0025631B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4F7AABE81BC4AE5E0025631B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4F7AABE91BC4AE5E0025631B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4F7AABEA1BC4AE5E0025631B</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>4F7AABFA1BC4AE5E0025631B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>4F7AABE71BC4AE5E0025631B</string>
-				<string>4F7AABE81BC4AE5E0025631B</string>
-				<string>4F7AABE91BC4AE5E0025631B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>4F7AABED1BC4AE5E0025631B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ProsperBorrowerSDKSampleUITests</string>
-			<key>productName</key>
-			<string>ProsperBorrowerSDKSampleUITests</string>
-			<key>productReference</key>
-			<string>4F7AABEB1BC4AE5E0025631B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>4F7AABEB1BC4AE5E0025631B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ProsperBorrowerSDKSampleUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4F7AABEC1BC4AE5E0025631B</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>4F7AABBF1BC4AE5E0025631B</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>4F7AABC61BC4AE5E0025631B</string>
-			<key>remoteInfo</key>
-			<string>ProsperBorrowerSDKSample</string>
-		</dict>
-		<key>4F7AABED1BC4AE5E0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>4F7AABC61BC4AE5E0025631B</string>
-			<key>targetProxy</key>
-			<string>4F7AABEC1BC4AE5E0025631B</string>
-		</dict>
-		<key>4F7AABEE1BC4AE5E0025631B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4F7AABEF1BC4AE5E0025631B</string>
-				<string>4F7AABF11BC4AE5E0025631B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ProsperBorrowerSDKSampleUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABEF1BC4AE5E0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ProsperBorrowerSDKSampleUITests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABF01BC4AE5E0025631B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4F7AABEF1BC4AE5E0025631B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4F7AABF11BC4AE5E0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AABF21BC4AE5E0025631B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>4F7AABF31BC4AE5E0025631B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>4F7AABF41BC4AE5E0025631B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>4F7AABF51BC4AE5E0025631B</string>
-				<string>4F7AABF61BC4AE5E0025631B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>4F7AABF51BC4AE5E0025631B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>5935C4789428DB5F8140FE38</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_ENTITLEMENTS</key>
-				<string>ProsperBorrowerSDKSample/ProsperBorrowerSDKSample.entitlements</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Distribution: Prosper Marketplace, Inc.</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Distribution: Prosper Marketplace, Inc.</string>
-				<key>ENABLE_BITCODE</key>
-				<string>NO</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(PROJECT_DIR)/../Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>ProsperBorrowerSDKSample/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.prosper</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>4F7AABF61BC4AE5E0025631B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>CDB9A076191357B329E86438</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_ENTITLEMENTS</key>
-				<string>ProsperBorrowerSDKSample/ProsperBorrowerSDKSample.entitlements</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Distribution: Prosper Marketplace, Inc.</string>
-				<key>ENABLE_BITCODE</key>
-				<string>NO</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(PROJECT_DIR)/../Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>ProsperBorrowerSDKSample/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.prosper</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>4F7AABF71BC4AE5E0025631B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>4F7AABF81BC4AE5E0025631B</string>
-				<string>4F7AABF91BC4AE5E0025631B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>4F7AABF81BC4AE5E0025631B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ProsperBorrowerSDKSampleTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.prosper.ProsperBorrowerSDKSampleTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/ProsperBorrowerSDKSample.app/ProsperBorrowerSDKSample</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>4F7AABF91BC4AE5E0025631B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ProsperBorrowerSDKSampleTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.prosper.ProsperBorrowerSDKSampleTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/ProsperBorrowerSDKSample.app/ProsperBorrowerSDKSample</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>4F7AABFA1BC4AE5E0025631B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>4F7AABFB1BC4AE5E0025631B</string>
-				<string>4F7AABFC1BC4AE5E0025631B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>4F7AABFB1BC4AE5E0025631B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>ProsperBorrowerSDKSampleUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.prosper.ProsperBorrowerSDKSampleUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>ProsperBorrowerSDKSample</string>
-				<key>USES_XCTRUNNER</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>4F7AABFC1BC4AE5E0025631B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>ProsperBorrowerSDKSampleUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.prosper.ProsperBorrowerSDKSampleUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>ProsperBorrowerSDKSample</string>
-				<key>USES_XCTRUNNER</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>4F7AAC051BC4B1210025631B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>OfferViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AAC061BC4B1210025631B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>OfferViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F7AAC071BC4B1210025631B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4F7AAC061BC4B1210025631B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4F7AAC081BC4E28D0025631B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.text-based-dylib-definition</string>
-			<key>name</key>
-			<string>libsqlite3.0.tbd</string>
-			<key>path</key>
-			<string>usr/lib/libsqlite3.0.tbd</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>4F7AAC091BC4E28D0025631B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4F7AAC081BC4E28D0025631B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4F8424951E0CD694007DA05B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.entitlements</string>
-			<key>path</key>
-			<string>ProsperBorrowerSDKSample.entitlements</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4FEFC8BF1BF1ACD700E2E537</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
-			<key>name</key>
-			<string>ProsperBorrowerSDK.bundle</string>
-			<key>path</key>
-			<string>../Frameworks/ProsperBorrowerSDK.bundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4FEFC8C01BF1ACD700E2E537</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>ProsperBorrowerSDK.framework</string>
-			<key>path</key>
-			<string>../Frameworks/ProsperBorrowerSDK.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4FEFC8C11BF1ACD700E2E537</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4FEFC8BF1BF1ACD700E2E537</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4FEFC8C21BF1ACD700E2E537</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4FEFC8C01BF1ACD700E2E537</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5935C4789428DB5F8140FE38</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ProsperBorrowerSDKSample.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5DED31CA7489A6609AC1CF50</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7418253C48060816608FB905</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4F7AAC081BC4E28D0025631B</string>
-				<string>5DED31CA7489A6609AC1CF50</string>
-				<string>E3B4CC443B91F068E5D8B0AF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BCBAD30C637D6E05CA207F17</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>CDB9A076191357B329E86438</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ProsperBorrowerSDKSample.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E38C91F155A837816EE94E9A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>E3B4CC443B91F068E5D8B0AF</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-ProsperBorrowerSDKSample.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>4F7AABBF1BC4AE5E0025631B</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05C6FCB8DAF7BEA1F7DF9026 /* libPods-ProsperBorrowerSDKSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B4CC443B91F068E5D8B0AF /* libPods-ProsperBorrowerSDKSample.a */; };
+		4F01DDE31BD806FF00A4F998 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F01DDE21BD806FF00A4F998 /* WelcomeViewController.m */; };
+		4F01DDF31BD88D6C00A4F998 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F01DDF21BD88D6C00A4F998 /* LaunchScreen.xib */; };
+		4F7AABCC1BC4AE5E0025631B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AABCB1BC4AE5E0025631B /* main.m */; };
+		4F7AABCF1BC4AE5E0025631B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AABCE1BC4AE5E0025631B /* AppDelegate.m */; };
+		4F7AABD51BC4AE5E0025631B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F7AABD31BC4AE5E0025631B /* Main.storyboard */; };
+		4F7AABD71BC4AE5E0025631B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7AABD61BC4AE5E0025631B /* Assets.xcassets */; };
+		4F7AABE51BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AABE41BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests.m */; };
+		4F7AABF01BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AABEF1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests.m */; };
+		4F7AAC071BC4B1210025631B /* OfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AAC061BC4B1210025631B /* OfferViewController.m */; };
+		4F7AAC091BC4E28D0025631B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7AAC081BC4E28D0025631B /* libsqlite3.0.tbd */; };
+		4FEFC8C11BF1ACD700E2E537 /* ProsperBorrowerSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4FEFC8BF1BF1ACD700E2E537 /* ProsperBorrowerSDK.bundle */; };
+		4FEFC8C21BF1ACD700E2E537 /* ProsperBorrowerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEFC8C01BF1ACD700E2E537 /* ProsperBorrowerSDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F7AABE11BC4AE5E0025631B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7AABBF1BC4AE5E0025631B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F7AABC61BC4AE5E0025631B;
+			remoteInfo = ProsperBorrowerSDKSample;
+		};
+		4F7AABEC1BC4AE5E0025631B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F7AABBF1BC4AE5E0025631B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F7AABC61BC4AE5E0025631B;
+			remoteInfo = ProsperBorrowerSDKSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F01DDE11BD806FF00A4F998 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		4F01DDE21BD806FF00A4F998 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		4F01DDF21BD88D6C00A4F998 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		4F7AABC71BC4AE5E0025631B /* ProsperBorrowerSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProsperBorrowerSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F7AABCB1BC4AE5E0025631B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4F7AABCD1BC4AE5E0025631B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4F7AABCE1BC4AE5E0025631B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4F7AABD41BC4AE5E0025631B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F7AABD61BC4AE5E0025631B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F7AABDB1BC4AE5E0025631B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F7AABE01BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProsperBorrowerSDKSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F7AABE41BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProsperBorrowerSDKSampleTests.m; sourceTree = "<group>"; };
+		4F7AABE61BC4AE5E0025631B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F7AABEB1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProsperBorrowerSDKSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F7AABEF1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProsperBorrowerSDKSampleUITests.m; sourceTree = "<group>"; };
+		4F7AABF11BC4AE5E0025631B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F7AAC051BC4B1210025631B /* OfferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferViewController.h; sourceTree = "<group>"; };
+		4F7AAC061BC4B1210025631B /* OfferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferViewController.m; sourceTree = "<group>"; };
+		4F7AAC081BC4E28D0025631B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		4F8424951E0CD694007DA05B /* ProsperBorrowerSDKSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProsperBorrowerSDKSample.entitlements; sourceTree = "<group>"; };
+		4FEFC8BF1BF1ACD700E2E537 /* ProsperBorrowerSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ProsperBorrowerSDK.bundle; path = ../Frameworks/ProsperBorrowerSDK.bundle; sourceTree = "<group>"; };
+		4FEFC8C01BF1ACD700E2E537 /* ProsperBorrowerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ProsperBorrowerSDK.framework; path = ../Frameworks/ProsperBorrowerSDK.framework; sourceTree = "<group>"; };
+		5935C4789428DB5F8140FE38 /* Pods-ProsperBorrowerSDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProsperBorrowerSDKSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample.debug.xcconfig"; sourceTree = "<group>"; };
+		5DED31CA7489A6609AC1CF50 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB9A076191357B329E86438 /* Pods-ProsperBorrowerSDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProsperBorrowerSDKSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample.release.xcconfig"; sourceTree = "<group>"; };
+		E3B4CC443B91F068E5D8B0AF /* libPods-ProsperBorrowerSDKSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProsperBorrowerSDKSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F7AABC41BC4AE5E0025631B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7AAC091BC4E28D0025631B /* libsqlite3.0.tbd in Frameworks */,
+				4FEFC8C21BF1ACD700E2E537 /* ProsperBorrowerSDK.framework in Frameworks */,
+				05C6FCB8DAF7BEA1F7DF9026 /* libPods-ProsperBorrowerSDKSample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7AABDD1BC4AE5E0025631B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7AABE81BC4AE5E0025631B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C99C43FDA5B2191878A3BA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5935C4789428DB5F8140FE38 /* Pods-ProsperBorrowerSDKSample.debug.xcconfig */,
+				CDB9A076191357B329E86438 /* Pods-ProsperBorrowerSDKSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4F7AABBE1BC4AE5E0025631B = {
+			isa = PBXGroup;
+			children = (
+				4F7AABC91BC4AE5E0025631B /* ProsperBorrowerSDKSample */,
+				4FEFC8BF1BF1ACD700E2E537 /* ProsperBorrowerSDK.bundle */,
+				4FEFC8C01BF1ACD700E2E537 /* ProsperBorrowerSDK.framework */,
+				4F7AABE31BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests */,
+				4F7AABEE1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests */,
+				4F7AABC81BC4AE5E0025631B /* Products */,
+				7418253C48060816608FB905 /* Frameworks */,
+				4C99C43FDA5B2191878A3BA8 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		4F7AABC81BC4AE5E0025631B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F7AABC71BC4AE5E0025631B /* ProsperBorrowerSDKSample.app */,
+				4F7AABE01BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests.xctest */,
+				4F7AABEB1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F7AABC91BC4AE5E0025631B /* ProsperBorrowerSDKSample */ = {
+			isa = PBXGroup;
+			children = (
+				4F8424951E0CD694007DA05B /* ProsperBorrowerSDKSample.entitlements */,
+				4F7AABCD1BC4AE5E0025631B /* AppDelegate.h */,
+				4F7AABCE1BC4AE5E0025631B /* AppDelegate.m */,
+				4F01DDE11BD806FF00A4F998 /* WelcomeViewController.h */,
+				4F01DDE21BD806FF00A4F998 /* WelcomeViewController.m */,
+				4F7AAC051BC4B1210025631B /* OfferViewController.h */,
+				4F7AAC061BC4B1210025631B /* OfferViewController.m */,
+				4F7AABD31BC4AE5E0025631B /* Main.storyboard */,
+				4F7AABD61BC4AE5E0025631B /* Assets.xcassets */,
+				4F01DDF21BD88D6C00A4F998 /* LaunchScreen.xib */,
+				4F7AABDB1BC4AE5E0025631B /* Info.plist */,
+				4F7AABCA1BC4AE5E0025631B /* Supporting Files */,
+			);
+			path = ProsperBorrowerSDKSample;
+			sourceTree = "<group>";
+		};
+		4F7AABCA1BC4AE5E0025631B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F7AABCB1BC4AE5E0025631B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4F7AABE31BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F7AABE41BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests.m */,
+				4F7AABE61BC4AE5E0025631B /* Info.plist */,
+			);
+			path = ProsperBorrowerSDKSampleTests;
+			sourceTree = "<group>";
+		};
+		4F7AABEE1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4F7AABEF1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests.m */,
+				4F7AABF11BC4AE5E0025631B /* Info.plist */,
+			);
+			path = ProsperBorrowerSDKSampleUITests;
+			sourceTree = "<group>";
+		};
+		7418253C48060816608FB905 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F7AAC081BC4E28D0025631B /* libsqlite3.0.tbd */,
+				5DED31CA7489A6609AC1CF50 /* libPods.a */,
+				E3B4CC443B91F068E5D8B0AF /* libPods-ProsperBorrowerSDKSample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F7AABC61BC4AE5E0025631B /* ProsperBorrowerSDKSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F7AABF41BC4AE5E0025631B /* Build configuration list for PBXNativeTarget "ProsperBorrowerSDKSample" */;
+			buildPhases = (
+				4256AB41341B1D6B490B2FEE /* [CP] Check Pods Manifest.lock */,
+				4F7AABC31BC4AE5E0025631B /* Sources */,
+				4F7AABC41BC4AE5E0025631B /* Frameworks */,
+				4F7AABC51BC4AE5E0025631B /* Resources */,
+				BCBAD30C637D6E05CA207F17 /* [CP] Embed Pods Frameworks */,
+				E38C91F155A837816EE94E9A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProsperBorrowerSDKSample;
+			productName = ProsperBorrowerSDKSample;
+			productReference = 4F7AABC71BC4AE5E0025631B /* ProsperBorrowerSDKSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F7AABDF1BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F7AABF71BC4AE5E0025631B /* Build configuration list for PBXNativeTarget "ProsperBorrowerSDKSampleTests" */;
+			buildPhases = (
+				4F7AABDC1BC4AE5E0025631B /* Sources */,
+				4F7AABDD1BC4AE5E0025631B /* Frameworks */,
+				4F7AABDE1BC4AE5E0025631B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F7AABE21BC4AE5E0025631B /* PBXTargetDependency */,
+			);
+			name = ProsperBorrowerSDKSampleTests;
+			productName = ProsperBorrowerSDKSampleTests;
+			productReference = 4F7AABE01BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4F7AABEA1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F7AABFA1BC4AE5E0025631B /* Build configuration list for PBXNativeTarget "ProsperBorrowerSDKSampleUITests" */;
+			buildPhases = (
+				4F7AABE71BC4AE5E0025631B /* Sources */,
+				4F7AABE81BC4AE5E0025631B /* Frameworks */,
+				4F7AABE91BC4AE5E0025631B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F7AABED1BC4AE5E0025631B /* PBXTargetDependency */,
+			);
+			name = ProsperBorrowerSDKSampleUITests;
+			productName = ProsperBorrowerSDKSampleUITests;
+			productReference = 4F7AABEB1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F7AABBF1BC4AE5E0025631B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Prosper Marketplace Inc.";
+				TargetAttributes = {
+					4F7AABC61BC4AE5E0025631B = {
+						CreatedOnToolsVersion = 7.0.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					4F7AABDF1BC4AE5E0025631B = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 4F7AABC61BC4AE5E0025631B;
+					};
+					4F7AABEA1BC4AE5E0025631B = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 4F7AABC61BC4AE5E0025631B;
+					};
+				};
+			};
+			buildConfigurationList = 4F7AABC21BC4AE5E0025631B /* Build configuration list for PBXProject "ProsperBorrowerSDKSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F7AABBE1BC4AE5E0025631B;
+			productRefGroup = 4F7AABC81BC4AE5E0025631B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F7AABC61BC4AE5E0025631B /* ProsperBorrowerSDKSample */,
+				4F7AABDF1BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests */,
+				4F7AABEA1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F7AABC51BC4AE5E0025631B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FEFC8C11BF1ACD700E2E537 /* ProsperBorrowerSDK.bundle in Resources */,
+				4F7AABD71BC4AE5E0025631B /* Assets.xcassets in Resources */,
+				4F01DDF31BD88D6C00A4F998 /* LaunchScreen.xib in Resources */,
+				4F7AABD51BC4AE5E0025631B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7AABDE1BC4AE5E0025631B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7AABE91BC4AE5E0025631B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4256AB41341B1D6B490B2FEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BCBAD30C637D6E05CA207F17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E38C91F155A837816EE94E9A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F7AABC31BC4AE5E0025631B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7AABCF1BC4AE5E0025631B /* AppDelegate.m in Sources */,
+				4F01DDE31BD806FF00A4F998 /* WelcomeViewController.m in Sources */,
+				4F7AABCC1BC4AE5E0025631B /* main.m in Sources */,
+				4F7AAC071BC4B1210025631B /* OfferViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7AABDC1BC4AE5E0025631B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7AABE51BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F7AABE71BC4AE5E0025631B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7AABF01BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F7AABE21BC4AE5E0025631B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F7AABC61BC4AE5E0025631B /* ProsperBorrowerSDKSample */;
+			targetProxy = 4F7AABE11BC4AE5E0025631B /* PBXContainerItemProxy */;
+		};
+		4F7AABED1BC4AE5E0025631B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F7AABC61BC4AE5E0025631B /* ProsperBorrowerSDKSample */;
+			targetProxy = 4F7AABEC1BC4AE5E0025631B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4F7AABD31BC4AE5E0025631B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F7AABD41BC4AE5E0025631B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F7AABF21BC4AE5E0025631B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F7AABF31BC4AE5E0025631B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F7AABF51BC4AE5E0025631B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5935C4789428DB5F8140FE38 /* Pods-ProsperBorrowerSDKSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProsperBorrowerSDKSample/ProsperBorrowerSDKSample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Prosper Marketplace, Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Prosper Marketplace, Inc.";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ProsperBorrowerSDKSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prosper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4F7AABF61BC4AE5E0025631B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDB9A076191357B329E86438 /* Pods-ProsperBorrowerSDKSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProsperBorrowerSDKSample/ProsperBorrowerSDKSample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Prosper Marketplace, Inc.";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ProsperBorrowerSDKSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prosper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4F7AABF81BC4AE5E0025631B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ProsperBorrowerSDKSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prosper.ProsperBorrowerSDKSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProsperBorrowerSDKSample.app/ProsperBorrowerSDKSample";
+			};
+			name = Debug;
+		};
+		4F7AABF91BC4AE5E0025631B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ProsperBorrowerSDKSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prosper.ProsperBorrowerSDKSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProsperBorrowerSDKSample.app/ProsperBorrowerSDKSample";
+			};
+			name = Release;
+		};
+		4F7AABFB1BC4AE5E0025631B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ProsperBorrowerSDKSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prosper.ProsperBorrowerSDKSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ProsperBorrowerSDKSample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		4F7AABFC1BC4AE5E0025631B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ProsperBorrowerSDKSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prosper.ProsperBorrowerSDKSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ProsperBorrowerSDKSample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F7AABC21BC4AE5E0025631B /* Build configuration list for PBXProject "ProsperBorrowerSDKSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F7AABF21BC4AE5E0025631B /* Debug */,
+				4F7AABF31BC4AE5E0025631B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F7AABF41BC4AE5E0025631B /* Build configuration list for PBXNativeTarget "ProsperBorrowerSDKSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F7AABF51BC4AE5E0025631B /* Debug */,
+				4F7AABF61BC4AE5E0025631B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F7AABF71BC4AE5E0025631B /* Build configuration list for PBXNativeTarget "ProsperBorrowerSDKSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F7AABF81BC4AE5E0025631B /* Debug */,
+				4F7AABF91BC4AE5E0025631B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F7AABFA1BC4AE5E0025631B /* Build configuration list for PBXNativeTarget "ProsperBorrowerSDKSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F7AABFB1BC4AE5E0025631B /* Debug */,
+				4F7AABFC1BC4AE5E0025631B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F7AABBF1BC4AE5E0025631B /* Project object */;
+}
