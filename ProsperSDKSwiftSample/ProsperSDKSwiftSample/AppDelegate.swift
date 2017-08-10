@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import ProsperBorrowerSDK
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        PMIProsperConfig.initWithClientId("<your_prod_client_id>", clientSecret: "<your_prod_client_secret>", refMC: "<your_REF_mc>", refAC: "<your_REF_ac>",
+        PMIProsperConfig.initWithClientId(
+            "<your_prod_client_id>",
+            clientSecret: "<your_prod_client_secret>",
+            refMC: "<your_REF_mc>",
+            refAC: "<your_REF_ac>",
             prodCredentials: false)
         
         return true

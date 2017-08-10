@@ -7,10 +7,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>prosperAppID</key>
-	<string>prosperMobileIOS</string>
-	<key>prosperSecretID</key>
-	<string>7049e16f9c1d4d5e9da1e7c8682b73f1</string>
 	<key>refAC</key>
 	<string>billguard</string>
 	<key>refMC</key>
@@ -61,7 +57,7 @@
 		<key>showWelcomeScreen</key>
 		<false/>
 		<key>showThankYouScreen</key>
-		<false/>
+		<true/>
 	</dict>
 </dict>
 </plist>

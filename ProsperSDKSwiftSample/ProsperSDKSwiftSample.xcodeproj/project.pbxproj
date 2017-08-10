@@ -40,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		02033313EB326699EA3F62D0 /* libPods-ProsperSDKSwiftSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProsperSDKSwiftSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F20E4DA1BFAA089007673C6 /* ProsperSDKSwiftSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProsperSDKSwiftSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		4F20E4DE1BFAA0C1007673C6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4F20E4E01BFAA0DA007673C6 /* OfferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
 		4F33A7E31BFAFAFE0021B1C8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -128,7 +127,6 @@
 				4FD5FC0A1BFA99BA001EBB88 /* Assets.xcassets */,
 				4FD5FC0C1BFA99BA001EBB88 /* LaunchScreen.storyboard */,
 				4FD5FC0F1BFA99BA001EBB88 /* Info.plist */,
-				4F20E4DA1BFAA089007673C6 /* ProsperSDKSwiftSample-Bridging-Header.h */,
 			);
 			path = ProsperSDKSwiftSample;
 			sourceTree = "<group>";

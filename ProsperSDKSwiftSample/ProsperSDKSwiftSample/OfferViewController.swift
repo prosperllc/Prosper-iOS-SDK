@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import ProsperBorrowerSDK
 
 class OfferViewController: UIViewController, PMIBorrowerDelegate {
 

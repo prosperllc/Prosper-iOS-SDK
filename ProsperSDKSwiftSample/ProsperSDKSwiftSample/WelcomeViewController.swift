@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProsperBorrowerSDK
 
 class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerDelegate{
 
@@ -118,7 +119,7 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             
             // 13
             let randomNumber = arc4random_uniform(10000)
-            borrowerInfo.email = String(format:"TestUser20178%d@gmail.com", randomNumber)
+            borrowerInfo.email = String(format:"TestMar45%d@gmail.com", randomNumber)
             
             // Optional fields
             
@@ -132,7 +133,7 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             borrowerInfo.employerStartDate = "04/2010"
             borrowerInfo.occupationType = PMIDoctor.rawValue
             
-            borrowerInfo.ssnNumber = "123456786"
+            borrowerInfo.ssnNumber = "666057741"
             
             borrowerInfo.bankAccountNumber = "32423435345435"
             

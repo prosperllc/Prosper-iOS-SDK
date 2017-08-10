@@ -154,7 +154,7 @@
     requestParams.employerStartDate = @"04/2010";
     requestParams.occupationType = PMIDoctor;
     
-    //requestParams.ssnNumber = @"12345678";
+    requestParams.ssnNumber = @"666057741";
     
     requestParams.bankAccountNumber = @"32423435345435";
     
