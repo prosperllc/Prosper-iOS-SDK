@@ -140,7 +140,7 @@
     
     int number = arc4random() %200;
     // 13
-    requestParams.email = [NSString stringWithFormat:@"TestUser42%d@gmail.com",number];
+    requestParams.email = [NSString stringWithFormat:@"TestUser09%d@c1.dev",number];
     
     
     // Below are Optional fields. Below values gets prepopulated if they are sent.

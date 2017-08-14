@@ -119,7 +119,7 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             
             // 13
             let randomNumber = arc4random_uniform(10000)
-            borrowerInfo.email = String(format:"TestMar45%d@gmail.com", randomNumber)
+            borrowerInfo.email = String(format:"TestMar06%d@c1.dev", randomNumber)
             
             // Optional fields
             
