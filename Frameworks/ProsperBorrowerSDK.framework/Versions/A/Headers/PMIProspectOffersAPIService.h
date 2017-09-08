@@ -19,10 +19,10 @@ typedef void (^PMIProspectOffersResponseCompletionBlock)(PMIProspectOffersRespon
  @method
  
  @abstract Return the loan offers.
- @param requestParams If all values are not set for requestParams, this method will return error.
+ param requestParams If all values are not set for requestParams, this method will return error.
  
- @return PMILoanOffersProspectResponseCompletionBlock called when the getLoanOffers method is completed.
- @param PMILoanOffersResponse type has PMILoanOffersList and PMIResponseError objects.
+ return PMILoanOffersProspectResponseCompletionBlock called when the getLoanOffers method is completed.
+ param PMILoanOffersResponse type has PMILoanOffersList and PMIResponseError objects.
  PMILoanOffersList gets initailzed if there is success.
  PMIResponseError contains error information for failure.
  */

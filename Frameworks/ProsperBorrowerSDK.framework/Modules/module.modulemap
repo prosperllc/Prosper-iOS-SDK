@@ -7,5 +7,4 @@ framework module ProsperBorrowerSDK {
     link "sqlite3"
     link framework "UIKit"
     link framework "SystemConfiguration"
-    link framework "QuartzCore"
     }
