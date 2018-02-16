@@ -12,4 +12,5 @@ project.xcworkspace
 *.swp
 *.out
 **/Pods/
+**/index/
 **/Podfile.lock

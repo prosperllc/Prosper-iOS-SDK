@@ -91,25 +91,25 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             borrowerInfo.creditRangeId = PMIExcellentCredit.rawValue
             
             // 4
-            borrowerInfo.firstName = "TAHIR"
-            
+            borrowerInfo.firstName = "MONISE"
+
             // 5
-            borrowerInfo.lastName = "BESS"
-            
+            borrowerInfo.lastName = "KELLY"
+
             // 6
-            borrowerInfo.dateOfBirth = "01/01/1932"
-            
+            borrowerInfo.dateOfBirth = "01/01/1965"
+
             // 7
-            borrowerInfo.address1 = "1639 SW WITHDEAN RD"
-            
+            borrowerInfo.address1 = "14511 STAR CROSS TRL"
+
             // 8
-            borrowerInfo.city = "TOPEKA"
-            
+            borrowerInfo.city = "HELOTES"
+
             // 9
-            borrowerInfo.state = "KS"
-            
+            borrowerInfo.state = "TX"
+
             // 10
-            borrowerInfo.zipCode = "66611"
+            borrowerInfo.zipCode = "780234050"
             
             // 11
             borrowerInfo.employmentStatusId = PMIEmployed.rawValue
@@ -119,7 +119,7 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             
             // 13
             let randomNumber = arc4random_uniform(10000)
-            borrowerInfo.email = String(format:"TestMar06%d@c1.dev", randomNumber)
+            borrowerInfo.email = String(format:"TestMonise%d@c1.dev", randomNumber)
             
             // Optional fields
             
@@ -133,7 +133,7 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             borrowerInfo.employerStartDate = "04/2010"
             borrowerInfo.occupationType = PMIDoctor.rawValue
             
-            borrowerInfo.ssnNumber = "666057741"
+            borrowerInfo.ssnNumber = "666302683"
             
             borrowerInfo.bankAccountNumber = "32423435345435"
             
