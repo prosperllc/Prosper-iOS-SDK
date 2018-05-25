@@ -23,7 +23,7 @@ class OfferViewController: UIViewController, PMIBorrowerDelegate {
         // Do any additional setup after loading the view.
     }
     
-    func handleTap(_ gestureRecognizer: UIGestureRecognizer) {
+    @objc func handleTap(_ gestureRecognizer: UIGestureRecognizer) {
         // handling code
         let borrowerViewController =  PMIBorrowerViewController.init(offer: loanOffer, delegate: self)
         self.present(borrowerViewController!, animated: true, completion: nil)

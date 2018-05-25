@@ -108,7 +108,7 @@
     requestParams.loanPurposeId = PMIHomeImprovement;
     
     // 3
-    requestParams.creditRangeId = PMIExcellentCredit;
+    requestParams.partnerSourceCode = @"308";
     
     // 4
     requestParams.firstName = @"MONISE";
@@ -144,6 +144,7 @@
     
     
     // Below are Optional fields. Below values gets prepopulated if they are sent.
+    requestParams.creditRangeId = PMIExcellentCredit;
     requestParams.primaryPhoneNumber = @"4088029656";
     requestParams.secondaryPhoneNumber = @"4088029658";
     
@@ -159,11 +160,12 @@
     requestParams.bankAccountNumber = @"32423435345435";
     
     requestParams.bankRoutingNumber = @"121000248";
-    
+
+    requestParams.clientReferenceId = @"APPTest01";
     
     self.loadingView.hidden = NO;
     
-    [PMIProspectOffersAPIService getLoanOffers:requestParams withCompletionBlock:^(PMIProspectOffersResponse *servicesRespObj) {
+    [PMIProspectOffersAPIService getMarketPlaceOffers:requestParams withCompletionBlock:^(PMIProspectOffersResponse *servicesRespObj) {
         
         self.loadingView.hidden = YES;
         if(nil != servicesRespObj.loanOfferList.offers) {

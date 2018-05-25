@@ -20,7 +20,7 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 247/255, green: 147/255, blue:42/255, alpha: 1.0)
         self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         //self.navigationController?.navigationBar.hidden = true
         
@@ -30,7 +30,7 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
         paragrapStyle.lineSpacing = 4
         paragrapStyle.minimumLineHeight = 18
         
-        let attributes = [ NSParagraphStyleAttributeName:paragrapStyle]
+        let attributes = [ NSAttributedStringKey.paragraphStyle:paragrapStyle]
         
         let descriptionText = "Let your users apply for a loan through Prosper from your app.\n\nOption 1 : Pass user data to Prosper to present personalized loan offers within your app."
         
@@ -88,8 +88,8 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             borrowerInfo.loanPurposeId = PMIHomeImprovement.rawValue
             
             // 3
-            borrowerInfo.creditRangeId = PMIExcellentCredit.rawValue
-            
+            borrowerInfo.partnerSourceCode = "308"
+
             // 4
             borrowerInfo.firstName = "MONISE"
 
@@ -138,11 +138,13 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             borrowerInfo.bankAccountNumber = "32423435345435"
             
             borrowerInfo.bankRoutingNumber = "121000248"
-            
-            
+            borrowerInfo.creditRangeId = PMIExcellentCredit.rawValue
+            borrowerInfo.clientReferenceId = "APPTest01"
+
+
             self.loadingView.isHidden = false
             
-            PMIProspectOffersAPIService.getLoanOffers(borrowerInfo, withCompletionBlock: { (offersResponse) in
+            PMIProspectOffersAPIService.getMarketPlaceOffers(borrowerInfo, withCompletionBlock: { (offersResponse) in
                 self.loadingView.isHidden = true
                 
                 if let offerList:PMILoanOfferList = offersResponse?.loanOfferList {
