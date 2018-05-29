@@ -109,7 +109,7 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             borrowerInfo.state = "TX"
 
             // 10
-            borrowerInfo.zipCode = "780234050"
+            borrowerInfo.zipCode = "78023"
             
             // 11
             borrowerInfo.employmentStatusId = PMIEmployed.rawValue
@@ -182,6 +182,8 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
             status = "Loan is cancelled."
         } else if loanStatus == PMIBorrowerTimedOut {
             status = "Loan Process got timed out due to inactive user session."
+        } else if loanStatus == PMIBorrowerLoanError {
+            status = "Loan Process got cancelled due to api error"
         }
         
         let alert = UIAlertController(title: "Alert",

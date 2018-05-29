@@ -129,7 +129,7 @@
     requestParams.state = @"TX";
     
     // 10
-    requestParams.zipCode = @"780234050";
+    requestParams.zipCode = @"78023";
     
     // 11
     requestParams.employmentStatusId = PMIEmployed;
@@ -216,8 +216,9 @@
         loanStatus = @"Loan Process got cancelled";
     } else if(status == PMIBorrowerTimedOut) {
         loanStatus = @"Loan Process got timed out due to inactive user session";
+    } else if(status == PMIBorrowerLoanError) {
+        loanStatus = @"Loan Process got cancelled due to api error";
     }
-    
     
     UIAlertController * alertController =   [UIAlertController
                                              alertControllerWithTitle:@"Alert"
