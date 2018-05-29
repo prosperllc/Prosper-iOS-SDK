@@ -208,7 +208,6 @@
 				4F7AABC41BC4AE5E0025631B /* Frameworks */,
 				4F7AABC51BC4AE5E0025631B /* Resources */,
 				BCBAD30C637D6E05CA207F17 /* [CP] Embed Pods Frameworks */,
-				E38C91F155A837816EE94E9A /* [CP] Copy Pods Resources */,
 				4FE14E7520B794600069DD98 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -369,21 +368,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E38C91F155A837816EE94E9A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

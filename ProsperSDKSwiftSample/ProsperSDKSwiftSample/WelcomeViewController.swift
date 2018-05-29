@@ -61,7 +61,7 @@ class WelcomeViewController: UIViewController, UIAlertViewDelegate, PMIBorrowerD
     }
     
     @IBAction func getOffersButtonClicked(_ sender: AnyObject) {
-        let alert = UIAlertController(title: "Error",
+        let alert = UIAlertController(title: "",
                                       message: "Your personal information is shared for applying a Prosper Loan. Do you want to continue?",
                                       preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))

@@ -13,7 +13,7 @@ pod "AFNetworking", "~> 3.2.0"
 # https://github.com/AFNetworking/AFOAuth2Manager
 pod "AFOAuth2Manager", "~> 3.0.0"
 
-pod 'AdobeMobileSDK', '~> 4.14.1'
+pod 'AdobeMobileSDK', '~> 4.15.0'
 
 target :ProsperSDKSwiftSample do
 xcodeproj 'ProsperSDKSwiftSample.xcodeproj'
