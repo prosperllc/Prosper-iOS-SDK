@@ -16,11 +16,10 @@ spec.license = { :type => 'Copyright',
   spec.source       = { :git => 'https://github.com/prosperllc/Prosper-iOS-SDK.git', :tag => 'v2.3' }
   spec.requires_arc = true
   spec.ios.deployment_target = '9.0'
-  spec.dependency 'AFNetworking', '3.1.0'
+  spec.dependency 'AFNetworking', '3.2.0'
   spec.dependency 'AFOAuth2Manager', '3.0.0'
-  spec.dependency 'AdobeMobileSDK', '4.13.5'
+  spec.dependency 'AdobeMobileSDK', '4.15.0'
   spec.vendored_frameworks = 'Frameworks/ProsperBorrowerSDK.framework'
-  spec.resources = 'Frameworks/ProsperBorrowerSDK.bundle'
   spec.frameworks = 'SystemConfiguration'
   spec.library = 'sqlite3.0'
 

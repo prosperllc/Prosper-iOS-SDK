@@ -18,7 +18,6 @@
 		4FD5FC0E1BFA99BA001EBB88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5FC0C1BFA99BA001EBB88 /* LaunchScreen.storyboard */; };
 		4FD5FC191BFA99BA001EBB88 /* ProsperSDKSwiftSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5FC181BFA99BA001EBB88 /* ProsperSDKSwiftSampleTests.swift */; };
 		4FD5FC241BFA99BA001EBB88 /* ProsperSDKSwiftSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5FC231BFA99BA001EBB88 /* ProsperSDKSwiftSampleUITests.swift */; };
-		4FE14E7820B7B8EC0069DD98 /* ProsperBorrowerSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE14E7620B7B8EC0069DD98 /* ProsperBorrowerSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4FE14E7820B7B8EC0069DD98 /* ProsperBorrowerSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,7 +68,6 @@
 		4FD5FC1F1BFA99BA001EBB88 /* ProsperSDKSwiftSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProsperSDKSwiftSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD5FC231BFA99BA001EBB88 /* ProsperSDKSwiftSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProsperSDKSwiftSampleUITests.swift; sourceTree = "<group>"; };
 		4FD5FC251BFA99BA001EBB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FE14E7620B7B8EC0069DD98 /* ProsperBorrowerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ProsperBorrowerSDK.framework; path = ../Frameworks/ProsperBorrowerSDK.framework; sourceTree = "<group>"; };
 		99032CBEF99CD7D954337B38 /* Pods_ProsperSDKSwiftSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProsperSDKSwiftSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38124E2484AEBCF5467F3C0 /* Pods-ProsperSDKSwiftSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProsperSDKSwiftSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProsperSDKSwiftSample/Pods-ProsperSDKSwiftSample.debug.xcconfig"; sourceTree = "<group>"; };
 		CC6099BD055D67186AC2A116 /* Pods-ProsperSDKSwiftSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProsperSDKSwiftSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProsperSDKSwiftSample/Pods-ProsperSDKSwiftSample.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +105,6 @@
 		4FD5FBF71BFA99BA001EBB88 = {
 			isa = PBXGroup;
 			children = (
-				4FE14E7620B7B8EC0069DD98 /* ProsperBorrowerSDK.framework */,
 				4FD5FC021BFA99BA001EBB88 /* ProsperSDKSwiftSample */,
 				4FD5FC171BFA99BA001EBB88 /* ProsperSDKSwiftSampleTests */,
 				4FD5FC221BFA99BA001EBB88 /* ProsperSDKSwiftSampleUITests */,
@@ -330,12 +326,14 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/AFOAuth2Manager/AFOAuth2Manager.framework",
 				"${BUILT_PRODUCTS_DIR}/AdobeMobileSDK/AdobeMobileSDK.framework",
+				"${PODS_ROOT}/../../Frameworks/ProsperBorrowerSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFOAuth2Manager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AdobeMobileSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProsperBorrowerSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

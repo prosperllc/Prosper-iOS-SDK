@@ -1,25 +1,11 @@
-source 'https://github.com/artsy/Specs.git'
-source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '9.0'
 
 use_frameworks!
 
-workspace ‘ProsperBorrowerSDKSample’
-
-# https://github.com/AFNetworking/AFNetworking
-pod "AFNetworking", "~> 3.2.0"
-
-# https://github.com/AFNetworking/AFOAuth2Manager
-pod "AFOAuth2Manager", "~> 3.0.0"
-
-pod 'AdobeMobileSDK', '~> 4.15.0'
-
 target :ProsperBorrowerSDKSample do
-xcodeproj 'ProsperBorrowerSDKSample.xcodeproj'
+pod 'ProsperBorrowerSDK', :path => '..'
 end
-
-
 
 
 

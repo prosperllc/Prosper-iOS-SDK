@@ -17,8 +17,6 @@
 		4F7AABF01BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AABEF1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests.m */; };
 		4F7AAC071BC4B1210025631B /* OfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AAC061BC4B1210025631B /* OfferViewController.m */; };
 		4F7AAC091BC4E28D0025631B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7AAC081BC4E28D0025631B /* libsqlite3.0.tbd */; };
-		4FE14E7320B794600069DD98 /* ProsperBorrowerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE14E7220B794600069DD98 /* ProsperBorrowerSDK.framework */; };
-		4FE14E7420B794600069DD98 /* ProsperBorrowerSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE14E7220B794600069DD98 /* ProsperBorrowerSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5DF4F747B18F9472F4B0BF1 /* Pods_ProsperBorrowerSDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F5A667210B731BA61ACE10 /* Pods_ProsperBorrowerSDKSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4FE14E7420B794600069DD98 /* ProsperBorrowerSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +71,6 @@
 		4F7AAC061BC4B1210025631B /* OfferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferViewController.m; sourceTree = "<group>"; };
 		4F7AAC081BC4E28D0025631B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4F8424951E0CD694007DA05B /* ProsperBorrowerSDKSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProsperBorrowerSDKSample.entitlements; sourceTree = "<group>"; };
-		4FE14E7220B794600069DD98 /* ProsperBorrowerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ProsperBorrowerSDK.framework; path = ../Frameworks/ProsperBorrowerSDK.framework; sourceTree = "<group>"; };
 		5935C4789428DB5F8140FE38 /* Pods-ProsperBorrowerSDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProsperBorrowerSDKSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample.debug.xcconfig"; sourceTree = "<group>"; };
 		5DED31CA7489A6609AC1CF50 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB9A076191357B329E86438 /* Pods-ProsperBorrowerSDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProsperBorrowerSDKSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProsperBorrowerSDKSample/Pods-ProsperBorrowerSDKSample.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,7 +83,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7AAC091BC4E28D0025631B /* libsqlite3.0.tbd in Frameworks */,
-				4FE14E7320B794600069DD98 /* ProsperBorrowerSDK.framework in Frameworks */,
 				B5DF4F747B18F9472F4B0BF1 /* Pods_ProsperBorrowerSDKSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,7 +116,6 @@
 		4F7AABBE1BC4AE5E0025631B = {
 			isa = PBXGroup;
 			children = (
-				4FE14E7220B794600069DD98 /* ProsperBorrowerSDK.framework */,
 				4F7AABC91BC4AE5E0025631B /* ProsperBorrowerSDKSample */,
 				4F7AABE31BC4AE5E0025631B /* ProsperBorrowerSDKSampleTests */,
 				4F7AABEE1BC4AE5E0025631B /* ProsperBorrowerSDKSampleUITests */,
@@ -358,12 +352,14 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/AFOAuth2Manager/AFOAuth2Manager.framework",
 				"${BUILT_PRODUCTS_DIR}/AdobeMobileSDK/AdobeMobileSDK.framework",
+				"${PODS_ROOT}/../../Frameworks/ProsperBorrowerSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFOAuth2Manager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AdobeMobileSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProsperBorrowerSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
