@@ -3,7 +3,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = 'ProsperBorrowerSDK'
-  spec.version      = '2.3'
+  spec.version      = '3.0'
 spec.license = { :type => 'Copyright',
                 :text => <<-LICENSE
                 Copyright © 2015 Prosper Funding, LLC, All rights reserved.
@@ -13,9 +13,10 @@ spec.license = { :type => 'Copyright',
   spec.homepage     = 'https://github.com/prosperllc/Prosper-iOS-SDK'
   spec.social_media_url = 'https://www.facebook.com/prosperloans'
   spec.author       = 'Prosper Market Place.'
-  spec.source       = { :git => 'https://github.com/prosperllc/Prosper-iOS-SDK.git', :tag => 'v2.3' }
+  spec.source       = { :git => 'https://github.com/prosperllc/Prosper-iOS-SDK.git', :tag => 'v3.0' }
   spec.requires_arc = true
   spec.ios.deployment_target = '9.0'
+  spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4' }
   spec.dependency 'AFNetworking', '3.2.0'
   spec.dependency 'AFOAuth2Manager', '3.0.0'
   spec.dependency 'AdobeMobileSDK', '4.15.0'
