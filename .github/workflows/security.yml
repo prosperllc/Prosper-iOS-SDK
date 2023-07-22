@@ -1,0 +1,15 @@
+name: Security action
+
+on: [pull_request]
+
+jobs:
+  security-action:
+    uses: prosperllc/appsec-utils/.github/workflows/security.yml@master
+    with:
+      repo: ${{ github.repository }}
+      head_ref: ${{ github.head_ref}}
+      base_ref: ${{github.base_ref }}
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+      GH_PAT: ${{ secrets.SECRET_SCANNER_GITHUB_TOKEN}}
+      SLACK_TOKEN: ${{secrets.SECRET_SCANNER_SLACK_CHANNEL_ID}}
